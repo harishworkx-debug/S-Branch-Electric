@@ -1,5 +1,20 @@
 import { Link, useLocation, Navigate } from 'react-router-dom';
-import { Phone, ArrowRight, MapPin, Check, HelpCircle, Zap, Plus } from 'lucide-react';
+import {
+  Phone,
+  ArrowRight,
+  MapPin,
+  Check,
+  HelpCircle,
+  Zap,
+  Plus,
+  Home,
+  ShieldCheck,
+  Star,
+  Quote,
+  Clock,
+  CheckCircle2,
+  Wrench,
+} from 'lucide-react';
 import { useSeo } from '@/hooks/useSeo';
 import { BUSINESS } from '@/data/business';
 import { services } from '@/data/services';
@@ -45,7 +60,7 @@ export function ServiceAreaPage() {
     schema,
   });
 
-  const otherAreas = serviceAreas.filter((a) => a.slug !== area.slug).slice(0, 5);
+  const otherAreas = serviceAreas.filter((a) => a.slug !== area.slug).slice(0, 6);
 
   return (
     <>
@@ -56,41 +71,48 @@ export function ServiceAreaPage() {
         ]}
       />
 
-      <section className="relative overflow-hidden bg-navy-900">
-        <div
-          className="absolute inset-0 opacity-30"
-          style={{
-            backgroundImage:
-              'radial-gradient(circle at 80% 20%, rgba(250,204,21,0.15) 0%, transparent 50%)',
-          }}
-        />
-        <div className="container-page relative py-16 sm:py-20">
-          <div className="max-w-2xl">
-            <span className="eyebrow text-electric-400">
-              <MapPin className="h-3.5 w-3.5" />
-              Service Area
-            </span>
-            <h1 className="mt-4 font-display text-3xl font-extrabold text-white sm:text-4xl lg:text-5xl">
+      {/* Hero Section */}
+      <section className="relative overflow-hidden bg-navy-900 text-white">
+        <div className="absolute inset-0">
+          <img
+            src={area.heroImage}
+            alt={`Electrician working in ${area.city}`}
+            className="h-full w-full object-cover opacity-20"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-navy-950 via-navy-900/95 to-navy-900/80" />
+        </div>
+        <div className="container-page relative py-16 sm:py-20 lg:py-24">
+          <div className="max-w-3xl">
+            <div className="inline-flex items-center gap-2 rounded-full border border-electric-400/30 bg-electric-400/10 px-4 py-1.5 text-xs font-semibold text-electric-300">
+              <MapPin className="h-3.5 w-3.5 text-electric-400" />
+              <span>Dedicated {area.shortName} Electrical Contractor</span>
+            </div>
+            <h1 className="mt-5 font-display text-3xl font-extrabold text-white sm:text-4xl lg:text-5xl">
               {area.h1}
             </h1>
-            <p className="mt-5 text-lg text-charcoal-200">
-              Electrical installation and repair services available in {area.city}. Call to confirm availability for
-              your address.
-            </p>
-            <a
-              href={BUSINESS.phoneHref}
-              className="mt-7 inline-flex items-center gap-2.5 rounded-lg bg-electric-400 px-7 py-4 text-base font-bold text-navy-900 transition-all hover:bg-electric-300 hover:shadow-xl hover:shadow-electric-400/30 active:scale-[0.98]"
-            >
-              <Phone className="h-5 w-5" strokeWidth={2.5} />
-              Call {BUSINESS.phone}
-            </a>
+            <p className="mt-4 text-lg text-charcoal-200 leading-relaxed">{area.tagline}</p>
+
+            <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
+              <a
+                href={BUSINESS.phoneHref}
+                className="inline-flex items-center justify-center gap-2.5 rounded-xl bg-electric-400 px-7 py-4 text-base font-bold text-navy-950 transition-all hover:bg-electric-300 hover:shadow-xl hover:shadow-electric-400/30 active:scale-[0.98]"
+              >
+                <Phone className="h-5 w-5" strokeWidth={2.5} />
+                Call {BUSINESS.phone}
+              </a>
+              <span className="text-xs text-charcoal-300 sm:border-l sm:border-white/20 sm:pl-4">
+                Direct phone calls to Gustavo (Gus) · Same-day &amp; urgent service available
+              </span>
+            </div>
           </div>
         </div>
       </section>
 
+      {/* Main Content Area */}
       <section className="bg-white py-16 sm:py-20">
         <div className="container-page grid gap-12 lg:grid-cols-3">
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-2 space-y-12">
+            {/* About Section */}
             <Reveal>
               <h2 className="font-display text-2xl font-bold text-navy-900 sm:text-3xl">
                 About Electrical Services in {area.shortName}
@@ -104,23 +126,151 @@ export function ServiceAreaPage() {
               </div>
             </Reveal>
 
-            <Reveal className="mt-12">
+            {/* Neighborhoods & Zip Codes Served */}
+            <Reveal className="rounded-2xl border border-charcoal-200 bg-charcoal-50 p-6 sm:p-7">
+              <div className="flex items-center gap-2.5">
+                <MapPin className="h-5 w-5 text-electric-600" />
+                <h3 className="font-display text-lg font-bold text-navy-900">
+                  Neighborhoods &amp; Zip Codes Served in {area.shortName}
+                </h3>
+              </div>
+              <div className="mt-4">
+                <p className="text-xs font-bold uppercase tracking-wider text-charcoal-500 mb-2">
+                  Zip Codes Covered:
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {area.zipCodes.map((zip) => (
+                    <span
+                      key={zip}
+                      className="rounded-lg border border-charcoal-200 bg-white px-3 py-1 text-xs font-semibold text-navy-900"
+                    >
+                      {zip}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              <div className="mt-5">
+                <p className="text-xs font-bold uppercase tracking-wider text-charcoal-500 mb-2">
+                  Key Communities &amp; Subdivisions:
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {area.neighborhoods.map((n) => (
+                    <span
+                      key={n}
+                      className="rounded-lg bg-navy-50 px-3 py-1 text-xs font-medium text-navy-800 border border-navy-100"
+                    >
+                      {n}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </Reveal>
+
+            {/* Housing & Electrical Profile Matrix */}
+            <Reveal>
+              <h2 className="font-display text-2xl font-bold text-navy-900 sm:text-3xl">
+                {area.shortName} Housing &amp; Electrical Profile
+              </h2>
+              <p className="mt-2 text-sm text-charcoal-600">
+                Understanding the typical age, panel infrastructure, and common issues found in {area.shortName} homes:
+              </p>
+
+              <div className="mt-6 grid gap-4 sm:grid-cols-2">
+                <div className="rounded-xl border border-charcoal-200 bg-white p-5 shadow-sm">
+                  <span className="text-xs font-bold uppercase tracking-wider text-charcoal-400">Housing Era</span>
+                  <h4 className="mt-1 font-display text-base font-bold text-navy-900">Typical Age Range</h4>
+                  <p className="mt-2 text-sm text-charcoal-700 leading-relaxed">
+                    {area.housingElectricalProfile.ageRange}
+                  </p>
+                </div>
+
+                <div className="rounded-xl border border-charcoal-200 bg-white p-5 shadow-sm">
+                  <span className="text-xs font-bold uppercase tracking-wider text-charcoal-400">Panel Types</span>
+                  <h4 className="mt-1 font-display text-base font-bold text-navy-900">Common Breaker Boxes</h4>
+                  <p className="mt-2 text-sm text-charcoal-700 leading-relaxed">
+                    {area.housingElectricalProfile.commonPanels}
+                  </p>
+                </div>
+
+                <div className="rounded-xl border border-amber-200 bg-amber-50/50 p-5 shadow-sm">
+                  <span className="text-xs font-bold uppercase tracking-wider text-amber-600">Safety Concerns</span>
+                  <h4 className="mt-1 font-display text-base font-bold text-navy-900">Primary Local Challenges</h4>
+                  <p className="mt-2 text-sm text-charcoal-700 leading-relaxed">
+                    {area.housingElectricalProfile.keyChallenges}
+                  </p>
+                </div>
+
+                <div className="rounded-xl border border-emerald-200 bg-emerald-50/50 p-5 shadow-sm">
+                  <span className="text-xs font-bold uppercase tracking-wider text-emerald-600">Recommended Fixes</span>
+                  <h4 className="mt-1 font-display text-base font-bold text-navy-900">Recommended Upgrades</h4>
+                  <p className="mt-2 text-sm text-charcoal-700 leading-relaxed">
+                    {area.housingElectricalProfile.recommendedUpgrades}
+                  </p>
+                </div>
+              </div>
+            </Reveal>
+
+            {/* Popular Local Services */}
+            <Reveal>
+              <h2 className="font-display text-2xl font-bold text-navy-900 sm:text-3xl">
+                Most Requested Electrical Services in {area.shortName}
+              </h2>
+              <div className="mt-6 grid gap-4 sm:grid-cols-2">
+                {area.popularServices.map((service, i) => (
+                  <div key={i} className="rounded-xl border border-charcoal-200 bg-charcoal-50 p-5">
+                    <div className="flex items-center gap-2">
+                      <Zap className="h-4 w-4 text-electric-600 shrink-0" fill="currentColor" />
+                      <h4 className="font-display text-base font-bold text-navy-900">{service.name}</h4>
+                    </div>
+                    <p className="mt-2 text-xs leading-relaxed text-charcoal-600">{service.reason}</p>
+                  </div>
+                ))}
+              </div>
+            </Reveal>
+
+            {/* Local Considerations */}
+            <Reveal>
               <h2 className="font-display text-2xl font-bold text-navy-900 sm:text-3xl">
                 Local Considerations in {area.shortName}
               </h2>
-              <ul className="mt-6 space-y-3">
+              <div className="mt-6 space-y-4">
                 {area.localContext.map((c, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-electric-400 text-navy-900">
-                      <Check className="h-3 w-3" strokeWidth={3} />
+                  <div key={i} className="flex items-start gap-3.5 rounded-xl border border-charcoal-100 bg-white p-5 shadow-sm">
+                    <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-navy-50 text-navy-800">
+                      <Check className="h-4 w-4 text-electric-600" strokeWidth={3} />
                     </span>
-                    <span className="text-sm leading-relaxed text-charcoal-700">{c}</span>
-                  </li>
+                    <div>
+                      <h4 className="text-sm font-bold text-navy-950">{c.title}</h4>
+                      <p className="mt-1 text-sm text-charcoal-600 leading-relaxed">{c.body}</p>
+                    </div>
+                  </div>
                 ))}
-              </ul>
+              </div>
             </Reveal>
 
-            <Reveal className="mt-12">
+            {/* Local Client Review (if available) */}
+            {area.localReview && (
+              <Reveal className="rounded-2xl border border-navy-800 bg-navy-900 p-7 text-white">
+                <div className="flex items-center justify-between">
+                  <span className="eyebrow text-electric-400">Verified Local Review</span>
+                  <div className="flex items-center gap-0.5">
+                    {[0, 1, 2, 3, 4].map((s) => (
+                      <Star key={s} className="h-4 w-4 text-electric-400" fill="currentColor" />
+                    ))}
+                  </div>
+                </div>
+                <blockquote className="mt-4 text-sm leading-relaxed text-charcoal-200 italic">
+                  &ldquo;{area.localReview.quote}&rdquo;
+                </blockquote>
+                <div className="mt-4 border-t border-white/10 pt-4 flex items-center justify-between text-xs">
+                  <span className="font-bold text-white">{area.localReview.author}</span>
+                  <span className="text-charcoal-400">{area.localReview.meta}</span>
+                </div>
+              </Reveal>
+            )}
+
+            {/* Available Services Grid */}
+            <Reveal>
               <h2 className="font-display text-2xl font-bold text-navy-900 sm:text-3xl">
                 Electrical Services Available in {area.shortName}
               </h2>
@@ -131,14 +281,14 @@ export function ServiceAreaPage() {
                     <Link
                       key={s.path}
                       to={s.path}
-                      className="group flex items-center gap-3 rounded-xl border border-charcoal-100 bg-white p-4 transition-all hover:border-electric-400 hover:shadow-md"
+                      className="group flex items-center gap-3 rounded-xl border border-charcoal-200 bg-white p-4 transition-all hover:border-electric-400 hover:shadow-md"
                     >
                       <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-navy-50 text-navy-700 transition-colors group-hover:bg-electric-400 group-hover:text-navy-900">
                         <Icon className="h-5 w-5" strokeWidth={2} />
                       </span>
                       <div className="flex-1">
                         <h3 className="text-sm font-semibold text-navy-900">{s.name}</h3>
-                        <p className="text-xs text-charcoal-500">Houston, TX</p>
+                        <p className="text-xs text-charcoal-500">{area.shortName}, TX</p>
                       </div>
                       <ArrowRight className="h-4 w-4 text-charcoal-400 transition-transform group-hover:translate-x-0.5" />
                     </Link>
@@ -147,14 +297,18 @@ export function ServiceAreaPage() {
               </div>
             </Reveal>
 
-            <Reveal className="mt-12">
+            {/* FAQs Accordion */}
+            <Reveal>
               <h2 className="font-display text-2xl font-bold text-navy-900 sm:text-3xl">
                 {area.shortName} Electrical FAQs
               </h2>
               <div className="mt-6 space-y-4">
                 {area.faqs.map((faq, i) => (
-                  <details key={i} className="group rounded-xl border border-charcoal-100 bg-white p-5 open:bg-charcoal-50">
-                    <summary className="flex cursor-pointer items-center justify-between gap-4 font-display text-base font-semibold text-navy-900">
+                  <details
+                    key={i}
+                    className="group rounded-xl border border-charcoal-200 bg-white p-5 open:bg-charcoal-50 transition-colors"
+                  >
+                    <summary className="flex cursor-pointer items-center justify-between gap-4 font-display text-base font-semibold text-navy-900 list-none">
                       <span className="flex items-start gap-2.5">
                         <HelpCircle className="mt-0.5 h-5 w-5 shrink-0 text-electric-500" />
                         {faq.question}
@@ -170,23 +324,31 @@ export function ServiceAreaPage() {
             </Reveal>
           </div>
 
+          {/* Sticky Sidebar */}
           <aside className="lg:col-span-1">
             <div className="sticky top-24 space-y-6">
-              <div className="rounded-2xl bg-navy-900 p-6 text-white">
-                <h3 className="font-display text-lg font-bold">Call About {area.shortName}</h3>
-                <p className="mt-2 text-sm text-charcoal-300">
-                  Confirm service availability for your {area.shortName} address and discuss your electrical needs.
+              <div className="rounded-2xl bg-navy-900 p-6 text-white shadow-xl">
+                <span className="eyebrow text-electric-400">Direct Contractor</span>
+                <h3 className="mt-2 font-display text-xl font-bold text-white">
+                  Need Work in {area.shortName}?
+                </h3>
+                <p className="mt-2 text-sm text-charcoal-300 leading-relaxed">
+                  Call Gustavo directly to describe your project, confirm scheduling, and get upfront pricing.
                 </p>
                 <a
                   href={BUSINESS.phoneHref}
-                  className="mt-5 flex w-full items-center justify-center gap-2.5 rounded-lg bg-electric-400 px-5 py-3.5 text-base font-bold text-navy-900 transition-all hover:bg-electric-300"
+                  className="mt-5 flex w-full items-center justify-center gap-2.5 rounded-xl bg-electric-400 px-5 py-3.5 text-base font-bold text-navy-950 transition-all hover:bg-electric-300"
                 >
                   <Phone className="h-5 w-5" strokeWidth={2.5} />
-                  {BUSINESS.phone}
+                  Call {BUSINESS.phone}
                 </a>
+                <div className="mt-4 flex items-center justify-center gap-2 text-xs text-charcoal-400">
+                  <Clock className="h-3.5 w-3.5 text-electric-400" />
+                  <span>Prompt response across {area.shortName}</span>
+                </div>
               </div>
 
-              <div className="rounded-2xl border border-charcoal-100 bg-white p-6">
+              <div className="rounded-2xl border border-charcoal-200 bg-white p-6 shadow-sm">
                 <h3 className="font-display text-base font-bold text-navy-900">Other Service Areas</h3>
                 <ul className="mt-4 space-y-2.5">
                   {otherAreas.map((a) => (
@@ -203,7 +365,7 @@ export function ServiceAreaPage() {
                 </ul>
                 <Link
                   to="/service-areas"
-                  className="mt-3 block rounded-lg bg-navy-50 px-3 py-2.5 text-center text-sm font-semibold text-navy-900 transition-colors hover:bg-navy-100"
+                  className="mt-4 block rounded-xl bg-navy-50 px-3 py-2.5 text-center text-sm font-semibold text-navy-900 transition-colors hover:bg-navy-100"
                 >
                   View All Service Areas
                 </Link>
@@ -213,6 +375,7 @@ export function ServiceAreaPage() {
         </div>
       </section>
 
+      {/* Process / Call Section */}
       <AreaCallSection areaName={area.shortName} city={area.city} />
 
       <CtaSection
@@ -228,20 +391,20 @@ function AreaCallSection({ areaName, city }: { areaName: string; city: string })
   const steps = [
     {
       title: 'Call with Your Address',
-      body: `Call ${BUSINESS.phone} and mention your ${areaName} address. This helps confirm that service is available for your specific location within the ${city} area.`,
+      body: `Call ${BUSINESS.phone} and mention your ${areaName} neighborhood or address. This helps confirm immediate service availability.`,
     },
     {
-      title: 'Describe Your Electrical Need',
-      body: 'Whether it is a panel upgrade, a lighting installation, a breaker repair, or a new circuit, describe what you need. The more detail you provide, the more helpful the conversation.',
+      title: 'Describe Your Electrical Project',
+      body: 'Whether it is a breaker replacement, a 200A panel upgrade, an EV charger, or flickering lights, talk directly through the symptoms with Gus.',
     },
     {
-      title: 'Confirm and Schedule',
-      body: 'Confirm service availability and discuss scheduling for the work. Project details, scope, and next steps are all handled over the phone.',
+      title: 'Upfront Quote & Scheduling',
+      body: 'Get clear, honest pricing guidance and schedule an appointment time that works conveniently with your day.',
     },
   ];
 
   return (
-    <section className="bg-charcoal-50 py-20 sm:py-24">
+    <section className="bg-charcoal-50 py-20 sm:py-24 border-t border-charcoal-200">
       <div className="container-page">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
           <Reveal>
@@ -250,46 +413,43 @@ function AreaCallSection({ areaName, city }: { areaName: string; city: string })
               Calling from {areaName}
             </span>
             <h2 className="mt-4 font-display text-3xl font-extrabold text-navy-900 sm:text-4xl">
-              What to Expect When You Call
+              How S Branch Electric Handles {areaName} Calls
             </h2>
-            <p className="mt-4 text-base text-charcoal-600">
-              S Branch Electric is based in the Spring Branch area of Houston. When you call from {areaName}, you are
-              speaking directly with an electrical installation service that serves the greater Houston area.
+            <p className="mt-4 text-base text-charcoal-600 leading-relaxed">
+              Every job begins with a direct phone conversation. There are no dispatch intermediaries or waiting days for
+              an email response.
             </p>
+            <div className="mt-6 flex flex-col gap-3 text-sm text-charcoal-700">
+              <div className="flex items-center gap-2.5">
+                <CheckCircle2 className="h-5 w-5 text-emerald-600 shrink-0" />
+                <span>Strict compliance with National Electrical Code (NEC)</span>
+              </div>
+              <div className="flex items-center gap-2.5">
+                <CheckCircle2 className="h-5 w-5 text-emerald-600 shrink-0" />
+                <span>Tidy, respectful work inside your {areaName} home</span>
+              </div>
+              <div className="flex items-center gap-2.5">
+                <CheckCircle2 className="h-5 w-5 text-emerald-600 shrink-0" />
+                <span>Transparent pricing before work begins</span>
+              </div>
+            </div>
+          </Reveal>
 
-            <div className="mt-8 space-y-5">
-              {steps.map((step, i) => (
-                <div key={i} className="flex items-start gap-4">
-                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-navy-900 font-display text-sm font-bold text-electric-400">
-                    {i + 1}
-                  </span>
-                  <div>
+          <div className="space-y-4">
+            {steps.map((step, i) => (
+              <Reveal key={step.title} delay={i * 80}>
+                <div className="rounded-2xl border border-charcoal-200 bg-white p-6 shadow-sm">
+                  <div className="flex items-center gap-3">
+                    <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-electric-400 font-display text-sm font-bold text-navy-950">
+                      0{i + 1}
+                    </span>
                     <h3 className="font-display text-base font-bold text-navy-900">{step.title}</h3>
-                    <p className="mt-1 text-sm leading-relaxed text-charcoal-600">{step.body}</p>
                   </div>
+                  <p className="mt-2 text-sm leading-relaxed text-charcoal-600 pl-11">{step.body}</p>
                 </div>
-              ))}
-            </div>
-
-            <a
-              href={BUSINESS.phoneHref}
-              className="mt-8 inline-flex items-center gap-2.5 rounded-lg bg-electric-400 px-7 py-4 text-base font-bold text-navy-900 transition-all hover:bg-electric-300 hover:shadow-lg hover:shadow-electric-400/30 active:scale-[0.98]"
-            >
-              <Phone className="h-5 w-5" strokeWidth={2.5} />
-              Call {BUSINESS.phone}
-            </a>
-          </Reveal>
-
-          <Reveal delay={100}>
-            <div className="overflow-hidden rounded-2xl shadow-xl">
-              <img
-                src="https://images.pexels.com/photos/17995530/pexels-photo-17995530.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-                alt={`Downtown Houston skyline at dusk, showing the greater Houston area served by S Branch Electric`}
-                loading="lazy"
-                className="h-80 w-full object-cover"
-              />
-            </div>
-          </Reveal>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </div>
     </section>
