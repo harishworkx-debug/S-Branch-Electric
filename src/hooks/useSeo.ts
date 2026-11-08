@@ -8,7 +8,7 @@ interface SeoOptions {
   ogImage?: string;
 }
 
-const BASE_URL = 'https://sbranchelectric.com';
+const BASE_URL = 'https://www.springbranchelectric.co';
 
 export function useSeo({ title, description, path, schema, ogImage }: SeoOptions) {
   useEffect(() => {

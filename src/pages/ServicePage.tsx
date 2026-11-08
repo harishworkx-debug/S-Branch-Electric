@@ -1,6 +1,5 @@
 import { Link, useLocation, Navigate } from 'react-router-dom';
-import { Phone, ArrowRight, Check, MapPin, HelpCircle, Zap } from 'lucide-react';
-import * as Icons from 'lucide-react';
+import { Phone, ArrowRight, Check, MapPin, HelpCircle, Zap, Plus } from 'lucide-react';
 import { useSeo } from '@/hooks/useSeo';
 import { BUSINESS } from '@/data/business';
 import { services, getServiceByPath } from '@/data/services';
@@ -8,6 +7,7 @@ import { serviceAreas } from '@/data/serviceAreas';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { CtaSection } from '@/components/CtaSection';
 import { Reveal } from '@/components/Reveal';
+import { getServiceIcon } from '@/utils/serviceIcons';
 
 export function ServicePage() {
   const location = useLocation();
@@ -17,7 +17,7 @@ export function ServicePage() {
     return <Navigate to="/404" replace />;
   }
 
-  const Icon = (Icons as unknown as Record<string, Icons.LucideIcon>)[service.icon] ?? Icons.Zap;
+  const Icon = getServiceIcon(service.icon);
   const related = services.filter((s) => s.slug !== service.slug).slice(0, 4);
 
   const schema = {
@@ -177,7 +177,7 @@ export function ServicePage() {
                         {faq.question}
                       </span>
                       <span className="shrink-0 text-charcoal-400 transition-transform group-open:rotate-45">
-                        <Icons.Plus className="h-5 w-5" />
+                        <Plus className="h-5 w-5" />
                       </span>
                     </summary>
                     <p className="mt-3 pl-8 text-sm leading-relaxed text-charcoal-600">{faq.answer}</p>

@@ -1,6 +1,5 @@
 import { Link, useLocation, Navigate } from 'react-router-dom';
-import { Phone, ArrowRight, MapPin, Check, HelpCircle, Zap } from 'lucide-react';
-import * as Icons from 'lucide-react';
+import { Phone, ArrowRight, MapPin, Check, HelpCircle, Zap, Plus } from 'lucide-react';
 import { useSeo } from '@/hooks/useSeo';
 import { BUSINESS } from '@/data/business';
 import { services } from '@/data/services';
@@ -8,6 +7,7 @@ import { serviceAreas, getAreaByPath } from '@/data/serviceAreas';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { CtaSection } from '@/components/CtaSection';
 import { Reveal } from '@/components/Reveal';
+import { getServiceIcon } from '@/utils/serviceIcons';
 
 export function ServiceAreaPage() {
   const location = useLocation();
@@ -126,7 +126,7 @@ export function ServiceAreaPage() {
               </h2>
               <div className="mt-6 grid gap-4 sm:grid-cols-2">
                 {services.map((s) => {
-                  const Icon = (Icons as unknown as Record<string, Icons.LucideIcon>)[s.icon] ?? Icons.Zap;
+                  const Icon = getServiceIcon(s.icon);
                   return (
                     <Link
                       key={s.path}
@@ -160,7 +160,7 @@ export function ServiceAreaPage() {
                         {faq.question}
                       </span>
                       <span className="shrink-0 text-charcoal-400 transition-transform group-open:rotate-45">
-                        <Icons.Plus className="h-5 w-5" />
+                        <Plus className="h-5 w-5" />
                       </span>
                     </summary>
                     <p className="mt-3 pl-8 text-sm leading-relaxed text-charcoal-600">{faq.answer}</p>

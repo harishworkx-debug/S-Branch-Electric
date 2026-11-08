@@ -1,15 +1,15 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight, Phone } from 'lucide-react';
-import * as Icons from 'lucide-react';
 import type { ServicePage } from '@/data/services';
 import { BUSINESS } from '@/data/business';
+import { getServiceIcon } from '@/utils/serviceIcons';
 
 interface ServiceCardProps {
   service: ServicePage;
 }
 
 export function ServiceCard({ service }: ServiceCardProps) {
-  const Icon = (Icons as unknown as Record<string, Icons.LucideIcon>)[service.icon] ?? Icons.Zap;
+  const Icon = getServiceIcon(service.icon);
 
   return (
     <article className="card group flex flex-col overflow-hidden">

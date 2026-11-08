@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sbranchelectric.com/sitemap.xml
+Sitemap: https://www.springbranchelectric.co/sitemap.xml

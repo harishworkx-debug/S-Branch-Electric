@@ -1,38 +1,268 @@
 export interface Review {
-  quote: string;
+  id: string;
   author: string;
+  reviewerMeta?: string;
+  rating: number;
+  date: string;
+  quote: string;
   source: string;
+  services?: string;
+  priceAssessment?: string;
+  priceRange?: string;
+  positiveTraits?: string[];
+  ownerResponse?: string;
+  ownerResponseDate?: string;
+  tags: string[];
 }
+
+export interface GoogleTopic {
+  key: string;
+  label: string;
+  count: number;
+}
+
+export const googleTopics: GoogleTopic[] = [
+  { key: 'all', label: 'All', count: 17 },
+  { key: 'surge protection installation', label: 'surge protection installation', count: 2 },
+  { key: 'breaker repair', label: 'breaker repair', count: 2 },
+  { key: 'master electrician', label: 'master electrician', count: 2 },
+  { key: 'helpful staff', label: 'helpful staff', count: 4 },
+  { key: 'affordability', label: 'affordability', count: 2 },
+  { key: 'tidiness', label: 'tidiness', count: 2 },
+  { key: 'punctuality', label: 'punctuality', count: 3 },
+  { key: 'thoroughness', label: 'thoroughness', count: 2 },
+  { key: 'quality work', label: 'quality work', count: 4 },
+  { key: 'communication', label: 'communication', count: 4 },
+];
 
 export const reviews: Review[] = [
   {
-    quote:
-      'Gus was fantastic to work with. I called him on a Saturday after I blew a fuse in my kitchen by running my air fryer and toaster at the same time, and he actually answered the phone — which already impressed me. He showed up right on time Monday and was extremely professional and thorough. Gus took the time to check both appliances and clearly explained that my air fryer was pulling about 1700 watts, which exceeded the 20-amp circuit. He also inspected the breaker box and gave me helpful, practical advice, including recommending a whole-house surge protector as a smart future upgrade — no pressure, just solid guidance. If you live in Spring Branch or the surrounding Houston neighborhoods and want an electrician who is knowledgeable, punctual, and easy to talk to, I would absolutely recommend Gus.',
-    author: 'Google Review',
+    id: 'aaron-s',
+    author: 'Aaron S',
+    reviewerMeta: '6 reviews · 9 photos',
+    rating: 5,
+    date: '9 months ago',
+    quote: `Gus was fantastic to work with. I called him on a Saturday after I blew a fuse in my kitchen by running my air fryer and toaster at the same time, and he actually answered the phone — which already impressed me. He showed up right on time Monday and was extremely professional and thorough.
+
+Gus took the time to check both appliances and clearly explained that my air fryer was pulling about 1700 watts, which exceeded the 20-amp circuit. He also inspected the breaker box and gave me helpful, practical advice, including recommending a whole-house surge protector as a smart future upgrade — no pressure, just solid guidance.
+
+If you live in Spring Branch or the surrounding Houston neighborhoods and want an electrician who is knowledgeable, punctual, and easy to talk to, I would absolutely recommend Gus. I’ll be calling him again for any future electrical work.`,
     source: 'Google',
+    priceAssessment: 'Reasonable price',
+    priceRange: '$1–200',
+    services: 'Electrical outlet & switch repair',
+    ownerResponse: 'Thank you',
+    ownerResponseDate: '9 months ago',
+    tags: ['surge protection installation', 'punctuality', 'thoroughness', 'helpful staff'],
   },
   {
-    quote:
-      'I also sincerely recommend Mr. Gustavo / S Branch Electric nearby who recently came over and helped our family when our new electric clothes dryer from Costco wasn\'t installed properly (it wasn\'t grounded) and made a bad smell on its test run. I\'m grateful he was able to fit us in same day before the weekend even though I called on a Friday and that he installed some sort of surge protection at our breaker box too. He was kind, tidy, safe, plus great at communicating when he was coming and what our problem was.',
-    author: 'Google Review',
+    id: 'ava-camara',
+    author: 'Ava Camara',
+    reviewerMeta: '4 reviews',
+    rating: 5,
+    date: '4 months ago',
+    quote: `While I would still heartily recommend the electrician we used before for a different electric job, I also sincerely recommend Mr. Gustavo/S Branch Electric nearby who recently came over and helped our family when our new electric clothes dryer from costco wasn't installed properly (it wasn't grounded) and made a bad smell on its test run. I'm grateful he was able to fit us in same day before the weekend even though I called on a Friday and that he installed some sort of surge protection at our breaker box too. He was kind, tidy, safe (didn't do work outside when it was storming) plus great at communicating when he was coming and what our problem was, etc... I've got kids and it meant a lot to me that he checked out what the problem was right away and gave me some peace of mind about our outlet in the laundry room. It also meant a lot to me to know sooner than later that the problem was the dryer installation job so I could start getting the ball rolling on obtaining a replacement. Thank you, Mr. Gustavo!`,
     source: 'Google',
+    ownerResponse: 'Thank you',
+    ownerResponseDate: '4 months ago',
+    tags: ['surge protection installation', 'tidiness', 'helpful staff'],
   },
   {
-    quote:
-      'We used SB Electric twice recently and was very satisfied with the quality and timeliness of Gustavo\'s service. He is a skilled electrician, polite and communicated well with me. He provided set prices for the work.',
-    author: 'Google Review',
+    id: 'armand-abay',
+    author: 'Armand Abay',
+    reviewerMeta: 'Local Guide · 21 reviews',
+    rating: 5,
+    date: '6 months ago',
+    quote: `We used SB Electric twice recently and was very satisfied with the quality and timeliness of Gustavo’s service. He is a skilled electrician, polite and communicated well with me. He provided set prices for the work and afterwards I encouraged him to price work time and material for greater transparency.  I will use him again if I get better clarity on his price.`,
     source: 'Google',
+    services: 'Electrical outlet & switch repair',
+    ownerResponse: 'Thank you',
+    ownerResponseDate: '6 months ago',
+    tags: ['quality work', 'communication'],
   },
   {
-    quote:
-      'Gustavo not only fixed the issue with our breaker to give us back power in the washing room, but also saved us money. I will be referring him to other potential clients. Thanks again Gustavo!!!',
-    author: 'Google Review',
+    id: 'marc-barnhill',
+    author: 'Marc Barnhill',
+    reviewerMeta: '3 reviews',
+    rating: 5,
+    date: '3 months ago',
+    quote: `Came out within an hour of me contacting him and repaired quickly. I will definitely use them again. Outstanding service and quick and quality repair!`,
     source: 'Google',
+    priceAssessment: 'Great price',
+    priceRange: '$1–500',
+    services: 'Service not listed',
+    ownerResponse: 'Thank you',
+    ownerResponseDate: '3 months ago',
+    tags: ['affordability', 'quality work'],
   },
   {
-    quote:
-      'Gus was a great electrician. He was punctual, clean, and his pricing was very competitive. I wish there were more honest electricians out there like him. Highly recommend.',
-    author: 'Google Review',
+    id: 'melissa-d-zier',
+    author: 'Melissa D. Zier',
+    reviewerMeta: 'Local Guide · 25 reviews · 9 photos',
+    rating: 5,
+    date: '2 years ago',
+    quote: `We are extremely pleased with the service provided by Gus Rivera at Spring Branch Electric. Gus has consistently demonstrated excellent communication, professionalism, and top-notch work. He helped us install the electrical needs for our barrel sauna and more recently handled the updates required to power our home with a whole-house generator.
+
+Gus is always punctual, polite, and even arrives early, which is a rare quality these days. His attention to detail and dedication to getting the job done right have made a significant impression on us. We highly recommend Spring Branch Electric for anyone in need of reliable and professional electrical services!`,
     source: 'Google',
+    services: 'Sauna electrical installation, Whole-house generator hookup',
+    ownerResponse: 'Thank you',
+    ownerResponseDate: 'a year ago',
+    tags: ['master electrician', 'communication', 'punctuality', 'thoroughness'],
+  },
+  {
+    id: 'demarcus-sparks',
+    author: 'DeMarcus Sparks',
+    reviewerMeta: 'Local Guide · 18 reviews · 3 photos',
+    rating: 5,
+    date: '8 months ago',
+    quote: `Gustavo not only fixed the issue with our breaker to give us back power in the washing room, but also saved us money. I will be referring him to other potential clients. Thanks again Gustavo!!!`,
+    source: 'Google',
+    ownerResponse: 'Thank you',
+    ownerResponseDate: '8 months ago',
+    tags: ['breaker repair'],
+  },
+  {
+    id: 'lety-lopez',
+    author: 'Lety Lopez',
+    reviewerMeta: 'Local Guide · 11 reviews · 23 photos',
+    rating: 5,
+    date: 'a year ago',
+    quote: `Great job at explaining how it works, fast and friendly service, Interlock system installation, fault replacement breaker`,
+    source: 'Google',
+    services: 'Interlock system installation, fault replacement breaker',
+    ownerResponse: 'Thank you',
+    ownerResponseDate: 'a year ago',
+    tags: ['breaker repair'],
+  },
+  {
+    id: 'edward-le',
+    author: 'Edward Le',
+    reviewerMeta: '13 reviews',
+    rating: 5,
+    date: 'a year ago',
+    quote: `Gus was a great electrician. He was punctual, clean, and his pricing was very competitive. I wish there were more honest electricians out there like him. Highly recommend`,
+    source: 'Google',
+    priceAssessment: 'Great price',
+    services: 'Electrical panel replacement or upgrading',
+    ownerResponse: 'Thank you',
+    ownerResponseDate: 'a year ago',
+    tags: ['affordability', 'tidiness', 'punctuality'],
+  },
+  {
+    id: 'justin-tan',
+    author: 'Justin Tan',
+    reviewerMeta: 'Local Guide · 18 reviews · 14 photos',
+    rating: 5,
+    date: 'a year ago',
+    quote: `This is my second time using Gus' services and can't recommend him enough. He works fast, does a good job, and is fairly priced. They say you can't have all three but he's the exception.`,
+    source: 'Google',
+    ownerResponse: 'Thank you!',
+    ownerResponseDate: 'a year ago',
+    tags: ['quality work'],
+  },
+  {
+    id: 'norma-toledo',
+    author: 'Norma Toledo',
+    reviewerMeta: '5 reviews',
+    rating: 5,
+    date: '3 years ago',
+    quote: `Was affected by the winter storm and needed fixtures replaced new electrical box upgrade. Quick response best deal in town, come on a weekend, came highly recommend! Will be calling them again for any future work I may need!`,
+    source: 'Google',
+    positiveTraits: ['Responsiveness', 'Punctuality', 'Professionalism'],
+    services: 'Light fixture installation, Electrical outlet & switch repair, Electrical panel replacement or upgrading',
+    ownerResponse: 'Thank you',
+    ownerResponseDate: '2 years ago',
+    tags: ['helpful staff'],
+  },
+  {
+    id: 'doug-gbosi',
+    author: 'Doug Gbosi',
+    reviewerMeta: 'Local Guide · 41 reviews · 22 photos',
+    rating: 5,
+    date: '3 years ago',
+    quote: `Used S Branch Electric to relocate a power outlet, and install additional outdoor lights. On time, exceptional quality, and affordable. Highly recommended.`,
+    source: 'Google',
+    positiveTraits: ['Responsiveness', 'Punctuality', 'Quality', 'Professionalism', 'Value'],
+    services: 'Electrical outlet & switch relocation, Electrical outlet & switch repair',
+    ownerResponse: 'Thank you',
+    ownerResponseDate: '2 years ago',
+    tags: ['quality work'],
+  },
+  {
+    id: 'v-b',
+    author: 'V B',
+    reviewerMeta: '4 reviews',
+    rating: 5,
+    date: '10 months ago',
+    quote: `Gustavo was friendly, efficient, and he provided high quality service. Thank you!`,
+    source: 'Google',
+    services: 'Light fixture installation',
+    ownerResponse: 'Thank you',
+    ownerResponseDate: '9 months ago',
+    tags: ['helpful staff'],
+  },
+  {
+    id: 'erika-cooley',
+    author: 'Erika Cooley',
+    reviewerMeta: '6 reviews',
+    rating: 5,
+    date: '2 years ago',
+    quote: `Great availability and communication! Very knowledgeable and helpful! Affordable too!`,
+    source: 'Google',
+    ownerResponse: 'Thank you',
+    ownerResponseDate: '2 years ago',
+    tags: ['communication'],
+  },
+  {
+    id: 'rae-rae',
+    author: 'RAE RAE',
+    reviewerMeta: '3 reviews · 3 photos',
+    rating: 5,
+    date: 'a year ago',
+    quote: `Get it done right the first time.  Master electrician, family biz, great neighbor.`,
+    source: 'Google',
+    ownerResponse: 'Thank you',
+    ownerResponseDate: 'a year ago',
+    tags: ['master electrician'],
+  },
+  {
+    id: 'claudia-salazar',
+    author: 'Claudia Salazar',
+    reviewerMeta: '1 review',
+    rating: 5,
+    date: '3 years ago',
+    quote: `Awesome service.  Good prices.  Reliable.  Will hire again.`,
+    source: 'Google',
+    ownerResponse: 'Thank you',
+    ownerResponseDate: '2 years ago',
+    tags: ['quality work'],
+  },
+  {
+    id: 'christopher-highsmith',
+    author: 'Christopher Highsmith',
+    reviewerMeta: 'Local Guide · 90 reviews · 429 photos',
+    rating: 5,
+    date: 'a month ago',
+    quote: `Gus is a good guy, very trustworthy. Quick troubleshooting on nuisance tripping of AFCI breakers and identified the issue as failing led disc lights. Fair price. He also did some swaps on outlets for us. He talked me out of installing some deep outlets in a location where the box was too shallow to accommodate due to heat. He references the codes at every step. Also did some pool lighting and sourced the part for me which is always nice.`,
+    source: 'Google',
+    priceAssessment: 'Reasonable price',
+    services: 'Light fixture installation, Electrical outlet & switch relocation',
+    ownerResponse: 'Thank you',
+    ownerResponseDate: 'a month ago',
+    tags: ['communication'],
+  },
+  {
+    id: 'yasaira-vera',
+    author: 'Yasaira Vera',
+    reviewerMeta: 'Google Reviewer',
+    rating: 5,
+    date: '3 years ago',
+    quote: `Positive: Responsiveness, Quality, Professionalism`,
+    source: 'Google',
+    positiveTraits: ['Responsiveness', 'Quality', 'Professionalism'],
+    ownerResponse: 'Thank you',
+    ownerResponseDate: '2 years ago',
+    tags: ['quality work'],
   },
 ];

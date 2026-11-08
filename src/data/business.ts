@@ -14,8 +14,8 @@ export const BUSINESS = {
   mapEmbed:
     'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3462.0619457240064!2d-95.4914108!3d29.8047547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640c564ab270165%3A0xc3eac1525a1a9a37!2sS%20Branch%20Electric!5e0!3m2!1sen!2sin!4v1794106380609!5m2!1sen!2sin',
   rating: 5.0,
-  reviewCount: 16,
+  reviewCount: 17,
   facebook: 'https://www.facebook.com/p/S-Branch-Electric-100063738583342',
   yelp: 'https://www.yelp.com/biz/s-branch-electric-houston',
-  domain: 'https://sbranchelectric.com',
+  domain: 'https://www.springbranchelectric.co',
 } as const;
