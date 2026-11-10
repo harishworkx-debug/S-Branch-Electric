@@ -8,6 +8,8 @@ import { ServiceAreaPage } from '@/pages/ServiceAreaPage';
 import { AboutPage } from '@/pages/AboutPage';
 import { ReviewsPage } from '@/pages/ReviewsPage';
 import { ContactPage } from '@/pages/ContactPage';
+import { BlogListPage } from '@/pages/BlogListPage';
+import { BlogPostPage } from '@/pages/BlogPostPage';
 import { NotFoundPage } from '@/pages/NotFoundPage';
 import { services } from '@/data/services';
 import { serviceAreas } from '@/data/serviceAreas';
@@ -29,6 +31,8 @@ function App() {
           <Route path="/service-areas" element={<ServiceAreasPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/reviews" element={<ReviewsPage />} />
+          <Route path="/blog" element={<BlogListPage />} />
+          <Route path="/blog/:slug" element={<BlogPostPage />} />
           <Route path="/contact" element={<ContactPage />} />
           {serviceRoutes}
           {areaRoutes}

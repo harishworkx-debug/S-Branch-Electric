@@ -43,85 +43,85 @@ export const services: ServicePage[] = [
     name: 'Electrical Installation',
     shortName: 'Electrical Installation',
     ctaLabel: 'Call for Electrical Installation',
-    tagline: 'Complete electrical installation for Houston homes and commercial properties.',
+    tagline: 'Ground-up electrical systems, home additions, subpanels, and rough-in wiring for Houston builders and property owners.',
     icon: 'Zap',
     cardImage:
       'https://images.pexels.com/photos/27928762/pexels-photo-27928762.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
     heroImage:
       'https://images.pexels.com/photos/27928762/pexels-photo-27928762.jpeg?auto=compress&cs=tinysrgb&h=900&w=1600',
-    cardAlt: 'Electrician installing components inside a residential circuit breaker panel in Houston',
-    heroAlt: 'Professional electrician using a drill on an indoor circuit breaker panel during an electrical installation',
+    cardAlt: 'Electrician installing components inside a commercial and residential building panel in Houston',
+    heroAlt: 'Professional electrician using a drill on an electrical panel during a ground-up property installation',
     metaTitle: 'Electrical Installation in Houston, TX | S Branch Electric',
     metaDescription:
-      'Need electrical installation in Houston, TX? S Branch Electric handles residential and commercial electrical installation. Call 832-484-0514.',
-    h1: 'Electrical Installation in Houston, TX',
+      'Professional electrical installation in Houston, TX. Ground-up new construction, home additions, builder rough-ins, and subpanels. Call Gus at 832-484-0514.',
+    h1: 'Electrical Installation Services in Houston, TX',
     intro: [
-      'S Branch Electric provides comprehensive electrical installation services for residential and commercial properties throughout Houston, Texas. Whether you are building a new space, upgrading an aging system, or adding high-power appliances and dedicated circuits, master electrician Gustavo ("Gus") handles the work with meticulous care.',
-      'From the initial phone call through completed testing, the work is performed with transparent communication, clean job sites, and strict adherence to the National Electrical Code (NEC) and City of Houston standards.',
+      'S Branch Electric provides comprehensive, ground-up electrical installation for new construction, major home additions, detached workshops, and commercial properties throughout Greater Houston. Master electrician Gustavo ("Gus") manages the complete electrical scope from framing rough-ins to final municipal inspection sign-off.',
+      'We partner directly with custom homebuilders, remodeling general contractors, and property owners to engineer reliable, code-compliant electrical distribution. Every project is executed with precision load calculations, robust copper conductors, and full adherence to City of Houston building codes and NEC standards.',
     ],
     whatItIs: [
-      'Electrical installation covers the process of fitting, routing, securing, and energizing electrical components in a building. This includes service panels, subpanels, wiring runs, outlets, switches, lighting fixtures, breakers, and dedicated high-draw appliance circuits.',
-      'A proper installation follows strict NEC load calculations and local Houston permitting requirements. Every connection must be correctly sized to wire gauge, torqued to manufacturer specs, and grounded so the system operates safely under peak summer electrical load.',
+      'New construction and property-wide electrical installation encompasses the entire infrastructure required to energize a new or fully renovated building. This includes the utility service mast, meter base, main distribution switchgear, subpanel placement, branch circuit conduit and Romex rough-in, grounding electrode system (ground rods), and device trim-out.',
+      'Unlike simple appliance hookups, whole-property installations require formal NEC Article 220 load calculations, City of Houston permitting, rough-in framing inspections before insulation, and final mechanical inspections before power release by CenterPoint Energy.',
     ],
     warningSigns: [
-      'Installing high-power appliances (dryers, EV chargers, ranges) without a dedicated line',
-      'Remodeling or expanding a room without additional electrical circuit capacity',
-      'Frequent breaker trips caused by multiple modern devices sharing an old 15A circuit',
-      'Adding outdoor kitchens, pool pumps, or workshops that exceed existing panel slots',
+      'Planning a home addition, garage conversion, or ADU without expanding total service amperage',
+      'Unpermitted electrical work discovered during pre-purchase property inspections',
+      'Commercial tenant build-out requiring new three-phase panels and dedicated equipment drops',
+      'Subcontractors failing city rough-in inspections due to undersized conduit or improper box fill',
     ],
     processSteps: [
       {
-        title: 'On-Site Load Calculation',
-        body: 'We evaluate your main panel amperage, check available breaker space, and calculate expected amp-draw demand before starting.',
+        title: 'Architectural Blueprint & NEC Load Analysis',
+        body: 'We review architectural plans, calculate continuous and non-continuous electrical loads, and specify panel ampacity and conduit routing.',
       },
       {
-        title: 'Circuit Routing & Conduit Rough-In',
-        body: 'We route code-compliant copper conductors through framing or mount weather-rated EMT/PVC conduit for clean, protected runs.',
+        title: 'City of Houston Permitting & Rough-In',
+        body: 'We pull required municipal electrical permits, drill framing, pull heavy-gauge copper wiring, and secure all metal electrical rough boxes.',
       },
       {
-        title: 'Precision Device & Breaker Terminations',
-        body: 'Every breaker lug and receptacle terminal is torqued to exact inch-pound specifications, avoiding loose connections that cause arcing.',
+        title: 'Service Entrance & Grounding Electrode System',
+        body: 'We install the meter socket, utility riser mast, main distribution panel, and dual copper ground rods per NEC 250 grounding code.',
       },
       {
-        title: 'Polarity, Grounding & Voltage Verification',
-        body: 'We test circuit balance, polarity, ground continuity, and GFCI/AFCI trip mechanisms before energizing and signing off.',
+        title: 'Rough-In Inspection, Device Trim & Final Release',
+        body: 'We coordinate with city inspectors, install architectural devices and luminaires, test all circuit balances, and secure permanent utility power release.',
       },
     ],
     necCodeNote:
-      'All installations comply with NEC Article 210 (Branch Circuits), Article 220 (Load Calculations), and City of Houston building codes.',
+      'All whole-property installations comply with NEC Article 210 (Branch Circuits), Article 220 (Load Calculations), Article 250 (Grounding), and City of Houston Building Standards.',
     relatedReview: {
-      author: 'Ava Camara (Houston Client)',
-      meta: '4 reviews · Costco Dryer & Surge Protection Installation',
+      author: 'Melissa D. Zier (Houston Client)',
+      meta: 'Local Guide · 25 reviews · 9 photos',
       quote:
-        'Mr. Gustavo/S Branch Electric came over and helped our family when our new electric clothes dryer from Costco wasn’t installed properly (it wasn’t grounded) and made a bad smell on its test run. He fit us in same day before the weekend, installed surge protection at our breaker box, and gave me peace of mind about our outlet in the laundry room. Thank you, Mr. Gustavo!',
+        'We are extremely pleased with the service provided by Gus Rivera at Spring Branch Electric. Gus has consistently demonstrated excellent communication, professionalism, and top-notch work. He helped us install the electrical needs for our barrel sauna and more recently handled updates to power our home with a whole-house generator.',
     },
     commonNeeds: [
       {
-        title: 'New Construction & Additions',
-        body: 'Room additions, garage conversions, and accessory dwelling units needing complete electrical systems from the breaker panel to the final device.',
+        title: 'Ground-Up Residential Builds & Additions',
+        body: 'Complete electrical rough-in and finish trim for new single-family builds, second-story additions, and master suite expansions.',
       },
       {
-        title: 'High-Draw Appliance Hookups',
-        body: 'Electric dryers, ranges, tankless water heaters, and EV chargers requiring dedicated 240V circuits and proper grounding.',
+        title: 'Detached Garages, Workshops & ADUs',
+        body: 'Trenching underground feeder cable to supply standalone subpanels for detached workshops, storage buildings, and guest houses.',
       },
       {
-        title: 'Renovation & Remodel Rewiring',
-        body: 'Kitchen and bathroom remodels requiring moved outlets, under-cabinet lighting, and upgraded GFCI protection.',
+        title: 'Commercial Tenant Build-Outs',
+        body: 'Three-phase electrical distribution, retail display power, dedicated POS circuits, and illuminated exit signage for Houston businesses.',
       },
     ],
     considerations: [
-      'Permit and inspection requirements vary by project scope and jurisdiction within the Houston area.',
-      'Older Houston homes built before 1970 may have wiring that needs evaluation before new installations are added.',
-      'Dedicated circuits must be sized to appliance wattage with appropriate breaker protection.',
-      'Surge protection at the panel helps protect newly installed equipment from Houston’s frequent storm-related power spikes.',
+      'City of Houston permits and CenterPoint utility release must be coordinated in sequential inspection phases.',
+      'Underground utility locating (Texas 811) is required before trenching outdoor feeder conduits to outbuildings.',
+      'Proper wire sizing (THHN/copper) prevents voltage drop across long runs to detached garages and workshops.',
+      'Surge protective devices (SPDs) are mandated by NEC Article 230.67 for all newly installed service entrances.',
     ],
     servicesProvided: [
-      'Residential whole-home electrical installation',
-      'Commercial electrical installation and tenant build-outs',
-      'Dedicated appliance circuits (dryers, ovens, water heaters)',
-      'Lighting and ceiling fan fixture installation',
-      'Whole-home surge protection installation',
-      'Subpanel and circuit breaker additions',
+      'New construction electrical rough-in and trim',
+      'Residential room addition and ADU electrical wiring',
+      'Commercial tenant build-out electrical systems',
+      'Main service entrance and meter socket installation',
+      'Detached garage and workshop subpanel feeds',
+      'City of Houston permit management and inspection coordination',
     ],
     faqs: [
       {
@@ -229,7 +229,7 @@ export const services: ServicePage[] = [
     ],
     faqs: [
       {
-        question: 'How do I know if my Houston home needs rewiring?',
+        question: "How do I know whether my home's electrical wiring needs an upgrade?",
         answer:
           'Common signs include frequently tripping breakers, flickering lights, discolored outlet faceplates, a burning smell near outlets or the breaker panel, or visibly frayed wiring. If your home was built before 1975 and has never been updated, a wiring evaluation is recommended.',
       },
@@ -248,55 +248,55 @@ export const services: ServicePage[] = [
   {
     slug: 'residential-electrical-installation',
     path: '/residential-electrical-installation-houston-tx',
-    name: 'Residential Electrical Installation',
-    shortName: 'Residential Installation',
-    ctaLabel: 'Call for Residential Electrical Installation',
-    tagline: 'Safe, code-compliant electrical installation for Houston homes and homeowners.',
+    name: 'Residential Electrician & Home Electrical Upgrades',
+    shortName: 'Residential Electrician',
+    ctaLabel: 'Call Residential Electrician',
+    tagline: 'Dedicated 240V lines, electric dryer hookups, sauna wiring, air fryer circuits, and living space upgrades for Houston homes.',
     icon: 'Home',
     cardImage:
       'https://images.pexels.com/photos/32497160/pexels-photo-32497160.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
     heroImage:
       'https://images.pexels.com/photos/32497160/pexels-photo-32497160.jpeg?auto=compress&cs=tinysrgb&h=900&w=1600',
-    cardAlt: 'Electrician examining a residential fuse box during a home electrical installation in Houston',
-    heroAlt: 'An electrician carefully examines a residential fuse box indoors, ensuring electrical safety during a Houston home installation',
-    metaTitle: 'Residential Electrical Installation in Houston, TX | S Branch Electric',
+    cardAlt: 'Electrician examining a residential circuit breaker box during home appliance circuit upgrade in Houston',
+    heroAlt: 'An electrician carefully examines a residential fuse box indoors, ensuring electrical safety during a Houston home upgrade',
+    metaTitle: 'Residential Electrician in Houston, TX | S Branch Electric',
     metaDescription:
-      'Residential electrical installation in Houston, TX for homes, additions, and upgrades. Call S Branch Electric at 832-484-0514.',
-    h1: 'Residential Electrical Installation in Houston, TX',
+      'Trusted residential electrician in Houston, TX for homeowner projects: dedicated 240V appliance circuits, dryer hookups, saunas, and repairs. Call 832-484-0514.',
+    h1: 'Residential Electrician Serving Houston Homeowners',
     intro: [
-      'S Branch Electric serves homeowners across Houston with trusted residential electrical installation services. From adding a single convenience outlet to completing whole-home wiring upgrades, master electrician Gustavo ("Gus") treats your home with the utmost care.',
-      'Houston families deal with a wide range of electrical challenges, from older panels that cannot handle modern appliances to outdoor patios requiring weather-rated power. A direct phone call starts your project without corporate sales pressure.',
+      'S Branch Electric helps Houston homeowners power today’s modern high-wattage lifestyle without tripping breakers or risking electrical fires. Whether you purchased a high-draw appliance from Costco, are building an in-home barrel sauna, or need dedicated kitchen circuits for air fryers and microwaves, master electrician Gustavo ("Gus") handles the upgrade cleanly and safely.',
+      'Unlike massive commercial contractors, Gus specializes in working respectfully inside occupied, finished homes. We run new dedicated copper branch circuits through attics and crawlspaces with minimal drywall disturbance, leaving your living spaces tidy and fully up to code.',
     ],
     whatItIs: [
-      'Residential electrical installation encompasses all electrical components within single-family homes, townhouses, and residential condominiums. It covers the complete pathway from the exterior service entrance and meter can to the indoor breaker box, switches, lighting fixtures, and outlets.',
-      'All residential work must strictly comply with the National Electrical Code (NEC) and City of Houston residential codes, which mandate AFCI arc-fault protection in living areas, GFCI shock protection in wet zones, and tamper-resistant receptacles for child safety.',
+      'A dedicated appliance circuit is an isolated electrical run originating directly at the main breaker box and terminating at a single dedicated receptacle or hardwired disconnect. By isolating heavy-draw appliances from general lighting and convenience outlets, dedicated lines prevent circuit overloads and nuisance tripping.',
+      'Under NEC Article 210, high-demand devices—including electric clothes dryers (30A/240V), electric ranges (40A-50A), hot tubs and barrel saunas (30A-50A), Level 2 EV chargers (40A-50A), and microwave/air fryer kitchen stations—require individual dedicated circuits with correct gauge copper and specialized GFCI/AFCI protection.',
     ],
     warningSigns: [
-      'Blown fuses or tripped breakers when running the microwave and toaster together',
-      'Lack of grounded outlets for modern computers and home entertainment systems',
-      'Dark living spaces needing recessed LED lighting and ceiling fan installations',
-      'Adding high-demand appliances (EV chargers, hot tubs, saunas) that overload the current panel',
+      'Breakers tripping in the kitchen when running the air fryer and microwave or toaster simultaneously',
+      'Newly purchased electric dryer from Costco or Home Depot missing proper 4-wire grounding or smelling hot',
+      'Lights dimming visibly whenever a refrigerator compressor, sauna heater, or vacuum cleaner starts',
+      'Using multiple extension cords or power strips to power high-wattage home office equipment or heaters',
     ],
     processSteps: [
       {
-        title: 'Direct In-Home Consultation',
-        body: 'We listen to your specific needs, evaluate appliance wattages, and inspect your current breaker panel.',
+        title: 'Appliance Wattage & Panel Space Audit',
+        body: 'We verify appliance nameplate voltage and amperage (e.g. 1700W air fryer or 30A 240V dryer) and inspect available panel breaker capacity.',
       },
       {
-        title: 'Safety Isolation & Precision Cutting',
-        body: 'We de-energize the work area, lay drop cloths to protect your floors, and cut wall openings cleanly.',
+        title: 'Protected Clean Path Routing',
+        body: 'We route heavy-gauge Romex (10/3, 8/3, or 6/3 copper) through attics, crawlspaces, or conduit without unnecessary drywall damage.',
       },
       {
-        title: 'Heavy-Duty Copper Routing & Termination',
-        body: 'We pull premium copper cable and make solid, secure terminations using tamper-resistant, commercial-grade devices.',
+        title: 'Dedicated Receptacle & Proper Equipment Grounding',
+        body: 'We install commercial-grade 4-prong NEMA receptacles (e.g., 14-30R for dryers, 14-50R for EV) ensuring ground and neutral are completely separated.',
       },
       {
-        title: 'Testing & Clean Worksite Handover',
-        body: 'We test circuit voltage and trip mechanisms, vacuum up any drywall dust, and explain the new setup clearly.',
+        title: 'Amp-Draw Load Testing & Clean Handover',
+        body: 'We test live voltage under full appliance load, verify zero thermal hotspots, vacuum any drywall dust, and label the breaker clearly.',
       },
     ],
     necCodeNote:
-      'Complies with NEC Article 210.8 (GFCI Protection) and NEC Article 210.12 (AFCI Arc-Fault Protection in Living Areas).',
+      'Complies with NEC Article 210.8 (GFCI Protection), Article 210.12 (AFCI Arc-Fault Protection), and Article 250 (Separate Equipment Grounding conductors).',
     relatedReview: {
       author: 'Aaron S (Spring Branch Homeowner)',
       meta: 'Verified Google Review · 9 months ago',
@@ -305,31 +305,31 @@ export const services: ServicePage[] = [
     },
     commonNeeds: [
       {
-        title: 'Panel & Breaker Upgrades',
-        body: 'Upgrading older 100A or 150A panels to 200 amps to safely power multiple AC units, EV chargers, and modern home electronics.',
+        title: 'Dedicated Kitchen Appliance Circuits',
+        body: 'Adding isolated 20A branch lines so 1700W air fryers, espresso machines, and toaster ovens operate safely without tripping general kitchen breakers.',
       },
       {
-        title: 'Outlet & Switch Additions',
-        body: 'Adding outlets for home offices, installing GFCI receptacles in kitchens and baths, and fitting dimmer or smart switches.',
+        title: 'Electric Clothes Dryer 240V Hookups',
+        body: 'Installing code-compliant 4-wire 30A 240V dryer lines with dedicated equipment grounding to replace unsafe ungrounded 3-prong hookups.',
       },
       {
-        title: 'Lighting & Ceiling Fans',
-        body: 'Installing energy-efficient recessed lighting, under-cabinet fixtures, chandeliers, and heavy fan-rated ceiling boxes.',
+        title: 'Sauna, Hot Tub & Specialty Circuit Wiring',
+        body: 'Running exterior weather-rated feeds and GFCI disconnect boxes for outdoor saunas, swim spas, and patio kitchen appliances.',
       },
     ],
     considerations: [
-      'GFCI protection is mandatory in kitchens, bathrooms, garages, laundry rooms, and outdoor locations.',
-      'AFCI protection is required for living rooms, bedrooms, and general living spaces.',
-      'Ceiling fan boxes must be specifically rated for fan vibration and weight.',
-      'Older Houston homes may require panel modernization before new dedicated circuits can be added.',
+      'Modern electrical codes require 4-wire connections (hot, hot, neutral, separate ground) for all 240V appliances.',
+      'High-wattage appliances operating for 3+ hours continuously must be sized at 125% of rated load per NEC 210.19.',
+      'Homes with older 100A panels may need a tandem breaker or panel sub-feed to accommodate high-amperage 240V loads.',
+      'Surface wire raceways or clean attic fish paths keep drywall repair to an absolute minimum in furnished homes.',
     ],
     servicesProvided: [
-      'Whole-home residential electrical wiring',
-      'Outlet, switch, and GFCI receptacle installation',
-      'Recessed LED and chandelier fixture installation',
-      'Ceiling fan installation on fan-rated boxes',
-      'Dedicated circuits for dryers, ovens, and HVAC',
-      'Whole-home surge protector installation',
+      'Dedicated 20A 120V kitchen small appliance circuits',
+      '240V 30A electric clothes dryer line installation',
+      'Home sauna and hot tub dedicated electrical wiring',
+      'Dedicated home office computer and server circuits',
+      'Level 2 EV charging 240V 50A outlet installation',
+      'Living space ceiling fan and recessed lighting upgrades',
     ],
     faqs: [
       {
@@ -352,9 +352,9 @@ export const services: ServicePage[] = [
   {
     slug: 'commercial-electrical-installation',
     path: '/commercial-electrical-installation-houston-tx',
-    name: 'Commercial Electrical Installation',
-    shortName: 'Commercial Installation',
-    ctaLabel: 'Call for Commercial Electrical Installation',
+    name: 'Commercial Electrician & Tenant Build-Outs',
+    shortName: 'Commercial Electrician',
+    ctaLabel: 'Call Commercial Electrician',
     tagline: 'Reliable electrical installation for Houston retail, offices, and commercial facilities.',
     icon: 'Building2',
     cardImage:
@@ -363,10 +363,10 @@ export const services: ServicePage[] = [
       'https://images.pexels.com/photos/28265032/pexels-photo-28265032.jpeg?auto=compress&cs=tinysrgb&h=900&w=1600',
     cardAlt: 'Complex network of electrical wiring and control panels in a commercial setting in Houston',
     heroAlt: 'Complex network of electrical wiring and control panels in an industrial commercial setting during installation',
-    metaTitle: 'Commercial Electrical Installation in Houston, TX | S Branch Electric',
+    metaTitle: 'Commercial Electrician in Houston, TX | S Branch Electric',
     metaDescription:
-      'Commercial electrical installation in Houston, TX for offices, retail, and light commercial spaces. Call S Branch Electric at 832-484-0514.',
-    h1: 'Commercial Electrical Installation in Houston, TX',
+      'Commercial electrician in Houston, TX for offices, retail, and light commercial spaces. Call S Branch Electric at 832-484-0514.',
+    h1: 'Commercial Electrician for Houston Businesses & Retail',
     intro: [
       'S Branch Electric provides commercial electrical installation and renovation services for businesses throughout Houston, Texas. From tenant build-outs in retail centers to dedicated 3-phase machinery circuits, commercial projects demand rigorous safety and code compliance.',
       'We understand that commercial downtime costs money. Master electrician Gustavo works efficiently, adheres strictly to project timelines, and ensures all installations pass city commercial inspections.',
@@ -457,54 +457,54 @@ export const services: ServicePage[] = [
     slug: 'electrical-panel-installation',
     path: '/electrical-panel-installation-houston-tx',
     name: 'Electrical Panel Installation',
-    shortName: 'Panel Installation',
+    shortName: 'Electrical Panel Installation',
     ctaLabel: 'Call for Panel Installation',
-    tagline: 'New electrical panel installation and subpanel additions for Houston properties.',
+    tagline: 'New electrical service panels, secondary subpanels, and distribution equipment for Houston properties.',
     icon: 'LayoutGrid',
     cardImage:
       'https://images.pexels.com/photos/28950842/pexels-photo-28950842.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
     heroImage:
       'https://images.pexels.com/photos/28950842/pexels-photo-28950842.jpeg?auto=compress&cs=tinysrgb&h=900&w=1600',
-    cardAlt: 'Organized circuit breaker panel with color-coded wiring during a Houston panel installation',
-    heroAlt: 'Close-up of an organized circuit breaker panel featuring color-coded electrical wiring during installation',
+    cardAlt: 'Organized circuit breaker panel with color-coded wiring during a Houston panel replacement',
+    heroAlt: 'Close-up of an organized circuit breaker panel featuring color-coded electrical wiring during panel replacement',
     metaTitle: 'Electrical Panel Installation in Houston, TX | S Branch Electric',
     metaDescription:
-      'Electrical panel installation in Houston, TX. New panel installation and subpanels for homes and businesses by S Branch Electric. Call 832-484-0514.',
+      'New electrical panel installation and secondary subpanels in Houston, TX. New builds, garage additions, and workshop distribution. Call Gus at 832-484-0514.',
     h1: 'Electrical Panel Installation in Houston, TX',
     intro: [
-      'The electrical panel is the central heartbeat of your entire property, safely distributing power to every room and protecting conductors from overload. S Branch Electric installs new electrical main panels and subpanels for Houston homes and commercial buildings.',
-      'A correctly installed breaker box protects your property from electrical fires and ensures reliable operation. Whether building new or replacing outdated equipment, calling Gustavo connects you directly with the master electrician doing the installation.',
+      'Older Houston homes built between 1950 and 1985 frequently harbor obsolete, fire-hazard breaker panels that have lost their UL safety listing and cause insurance policy cancellations. S Branch Electric specializes in safe, permitted electrical panel replacements and secondary subpanel additions throughout Houston.',
+      'If your home has a Federal Pacific Electric (FPE) Stab-Lok, Zinsco, or Challenger breaker box, master electrician Gustavo ("Gus") can safely replace the hazardous equipment with a modern, high-grade Square D, Siemens, or Eaton distribution center. We also install secondary subpanels for workshops, pool pumps, and garage conversions.',
     ],
     whatItIs: [
-      'An electrical panel (breaker box or service distribution panel) receives electrical utility feed from the meter and distributes it through individual circuit breakers to branch circuits. The main breaker protects the entire structure from overcurrent.',
-      'Panel installation requires mounting a NEMA-rated enclosure, connecting service entrance conductors, bonding the neutral bus to the grounding electrode system (ground rods), neatly organizing and terminating branch circuits, and labeling every breaker accurately.',
+      'Electrical panel replacement involves removing an outdated, damaged, or fire-hazardous breaker box and replacing it with a brand-new, code-compliant panelboard. Unlike an amperage upgrade, panel replacement focuses on eliminating defective equipment, resolving burnt busbars, and bringing the home into full compliance with current insurance safety standards.',
+      'Subpanel installation involves mounting a secondary breaker enclosure fed from your main distribution panel via a dedicated feeder breaker. Subpanels provide localized circuit control and extra breaker spaces for detached garages, guest suites, home workshops, or outdoor living setups.',
     ],
     warningSigns: [
-      'Older fuse box or hazardous Federal Pacific / Zinsco breaker box in place',
-      'Rust, moisture intrusion, or corrosion visible inside or outside the panel enclosure',
-      'Breaker box running at 100% capacity with no physical space for new circuits',
-      'Home addition, workshop, or pool installation requiring a dedicated subpanel',
+      'Insurance carrier requiring panel replacement due to Federal Pacific (FPE) or Zinsco branding',
+      'Breakers failing to trip during a short circuit, causing wiring insulation to melt or burn',
+      'Corroded, oxidized, or physically damaged panel interior from roof or wall water intrusion',
+      'Main panel is 100% full, with zero breaker spaces left to wire a garage workshop or pool',
     ],
     processSteps: [
       {
-        title: 'Utility Coordination & Scheduled Disconnect',
-        body: 'We coordinate with CenterPoint Energy to schedule safe temporary power disconnect at the utility meter.',
+        title: 'Hazardous Panel Identification & Scope Verification',
+        body: 'We inspect your current enclosure, verify whether busbar degradation or fire hazards (FPE/Zinsco) exist, and map out circuit routing.',
       },
       {
-        title: 'Enclosure Mounting & Service Cable Connection',
-        body: 'We securely mount the heavy-duty enclosure and terminate the main service entrance conductors with anti-oxidant compound.',
+        title: 'Safe Utility Isolation & Box De-Energization',
+        body: 'We coordinate with CenterPoint Energy to pull the utility meter, safely de-energizing the service entrance conductors before work begins.',
       },
       {
-        title: 'Breaker Seating & Ground Bonding',
-        body: 'We seat new branch breakers, land neutral and ground conductors, and bond the system to two 8-foot copper ground rods.',
+        title: 'New NEMA Panel Mounting & Circuit Transfer',
+        body: 'We mount a modern galvanized steel enclosure, terminate service feeds with torque-limiting tools, and neatly land all branch circuits.',
       },
       {
-        title: 'Circuit Labeling & Inspection Sign-Off',
-        body: 'Every circuit is tested under load, clearly labeled on the directory door, and prepared for final city inspection sign-off.',
+        title: 'Grounding Electrode Verification & Clear Labeling',
+        body: 'We drive dual 8-foot copper ground rods if missing, bond the neutral bus, label every breaker clearly, and arrange city inspection.',
       },
     ],
     necCodeNote:
-      'Installed in compliance with NEC Article 408 (Switchboards and Panelboards) and Article 250 (Grounding and Bonding).',
+      'Installed in compliance with NEC Article 408 (Panelboards), Article 250 (Grounding and Bonding), and local insurance safety underwriting criteria.',
     relatedReview: {
       author: 'Norma Toledo (Houston Homeowner)',
       meta: '5 reviews · Winter Storm Recovery',
@@ -513,35 +513,35 @@ export const services: ServicePage[] = [
     },
     commonNeeds: [
       {
-        title: 'New Construction Panels',
-        body: 'Installing full main distribution panels for new homes, guest houses, and commercial buildings.',
+        title: 'FPE & Zinsco Fire Hazard Replacement',
+        body: 'Eliminating known fire-hazard panels that fail to trip under load and prevent home sales or insurance coverage.',
       },
       {
-        title: 'Subpanel Installations',
-        body: 'Adding secondary breaker panels in garages, workshops, or additions when the main panel has no remaining breaker space.',
+        title: 'Detached Garage & Workshop Subpanels',
+        body: 'Running high-capacity 60A–100A subpanel feeds to power air compressors, welders, and power tools in detached buildings.',
       },
       {
-        title: 'Replacing Hazardous Older Panels',
-        body: 'Removing obsolete Federal Pacific, Zinsco, or fuse boxes known for catastrophic breaker failure and fire hazards.',
+        title: 'Water Damaged & Corroded Panel Swaps',
+        body: 'Replacing rusty, compromised exterior or garage breaker boxes with weather-tight NEMA 3R outdoor enclosures.',
       },
     ],
     considerations: [
-      'Panel amperage must match service entrance capacity and calculated total building load.',
-      'The panel enclosure must maintain a minimum 3-foot front clearance per NEC safety rules.',
-      'All breaker brands must be listed and approved by the panel manufacturer (no mismatched breakers).',
-      'Panel installations in Houston require permits, utility coordination, and inspection.',
+      'Most Texas insurance companies will not write homeowners policies on homes with Federal Pacific Stab-Lok or Zinsco panels.',
+      'A subpanel requires separated neutral and ground busbars (no neutral-to-ground bonding in subpanels).',
+      'All newly installed main panels must include an exterior emergency service disconnect switch per NEC 230.85.',
+      'Grounding electrode conductors must be bonded to the cold water line and dual supplemental ground rods.',
     ],
     servicesProvided: [
-      'New 200-amp main breaker panel installation',
-      'Subpanel installation for garages, pools, and workshops',
-      'Replacement of obsolete and hazardous breaker boxes',
-      'Grounding electrode system and ground rod installation',
-      'Panel surge protector installation',
-      'Circuit breaker installation and panel labeling',
+      'Federal Pacific Electric (FPE) panel replacement',
+      'Zinsco and Challenger breaker box replacement',
+      'Secondary subpanel installation for workshops & garages',
+      'Exterior NEMA 3R weatherproof panel replacement',
+      'Ground rod and bonding electrode system installation',
+      'Insurance compliance certification and city permitting',
     ],
     faqs: [
       {
-        question: 'How do I know if I need a new electrical panel in Houston?',
+        question: 'How do I know if my electrical panel needs replacing?',
         answer:
           'Common reasons include adding high-load appliances (EV chargers, hot tubs, AC units), an obsolete panel brand (Federal Pacific or Zinsco), physical rust or burn marks, or a panel that has zero space for new circuits. Call Gus at 832-484-0514 to inspect your setup.',
       },
@@ -560,34 +560,34 @@ export const services: ServicePage[] = [
   {
     slug: 'electrical-panel-upgrades',
     path: '/electrical-panel-upgrades-houston-tx',
-    name: 'Electrical Panel Upgrades',
-    shortName: 'Panel Upgrades',
-    ctaLabel: 'Call for Panel Upgrades',
-    tagline: 'Upgrade your electrical panel to 200 amps for safety and capacity in Houston.',
+    name: 'Electrical Panel Upgrades & Heavy-Ups',
+    shortName: 'Electrical Panel Upgrade',
+    ctaLabel: 'Call for Panel Upgrade',
+    tagline: 'Service amperage heavy-ups and manual generator interlock kits to power modern Houston life and hurricane resilience.',
     icon: 'ArrowUpCircle',
     cardImage:
       'https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
     heroImage:
       'https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&h=900&w=1600',
-    cardAlt: 'Electrician working on a circuit breaker panel with colorful wires during a Houston panel upgrade',
+    cardAlt: 'Electrician working on a circuit breaker panel with colorful wires during a Houston 200A panel upgrade',
     heroAlt: 'Hand of electrician working on a circuit breaker panel with colorful wires, ensuring safe electrical connections during a panel upgrade',
-    metaTitle: 'Electrical Panel Upgrades in Houston, TX | S Branch Electric',
+    metaTitle: 'Electrical Panel Upgrade in Houston, TX | S Branch Electric',
     metaDescription:
-      'Electrical panel upgrades in Houston, TX. Increase capacity and safety with a 200-amp panel upgrade from S Branch Electric. Call 832-484-0514.',
-    h1: 'Electrical Panel Upgrades in Houston, TX',
+      'Electrical panel upgrade in Houston, TX. Upgrade from 100A to 200A, replace hazardous Zinsco/FPE panels, and install generator interlocks. Call 832-484-0514.',
+    h1: 'Electrical Panel Upgrades & 200A Heavy-Ups in Houston, TX',
     intro: [
-      'If your Houston home or business has an electrical panel that struggles to keep up with modern demands, S Branch Electric performs 200-amp electrical panel upgrades to increase capacity and elevate fire safety. An upgrade replaces your existing panel and service conductors with a modern, high-capacity system.',
-      'Many Houston homes built between the 1950s and 1980s still have 100-amp or 125-amp panels designed for a time before computers, high-wattage air fryers, multiple AC units, and electric vehicles. A phone call to Gus will help determine whether a panel upgrade is right for your property.',
+      'If your Houston home has an electrical panel that struggles to keep up with modern living, S Branch Electric performs comprehensive 200-amp and 400-amp service heavy-ups. We also install manual generator interlock kits, allowing you to power your entire home during Houston’s frequent hurricane and storm outages safely without dangerous backfeeding.',
+      'Many Houston homes built between 1950 and 1985 still run on 100-amp or 125-amp service drops designed for an era before central heat pumps, Level 2 EV chargers, and multiple AC compressors. Calling master electrician Gustavo Rivera connects you directly with the technician who will upgrade your service entrance and meter can.',
     ],
     whatItIs: [
-      'An electrical panel upgrade is the replacement of an existing undersized service panel with a modern 200-amp (or 400-amp) panel. It typically involves upgrading the service entrance cables from the utility meter, replacing the meter can if required, installing a modern breaker box with surge suppression, and reconnecting all branch circuits.',
-      'Upgrading gives your home ample capacity to run central air conditioning, electric vehicle chargers, modern kitchen suites, and swimming pool heaters simultaneously without overloading the electrical system.',
+      'A 200-amp electrical panel upgrade (service heavy-up) is the replacement of an undersized 60A, 100A, or 125A service with a modern 200-amp utility entrance. This involves upsizing the exterior service mast, pulling 4/0 aluminum or 2/0 copper entrance conductors, installing a new meter base, and fitting a modern 40-slot breaker enclosure.',
+      'A manual generator interlock kit is a code-mandated mechanical safety device fitted directly to your main breaker panel. It locks out the utility main switch before allowing a portable generator breaker to engage, safely feeding power to critical home circuits without backfeeding power lines or endangering utility lineworkers.',
     ],
     warningSigns: [
-      'Current home panel is only 100 or 125 amps while power demands continue to rise',
-      'Breakers trip frequently when the central air conditioning or kitchen appliances kick on',
-      'Adding a Level 2 EV charging station (40A-60A), hot tub, or whole-house generator',
-      'Breaker box emits a faint buzzing sound or individual breakers feel warm to the touch',
+      'Current home service is only 100 or 125 amps while adding EV chargers, heat pumps, or pool heaters',
+      'Breakers trip frequently when central air conditioning and kitchen appliances run simultaneously',
+      'Desire for storm backup power using a portable generator without paying $15,000+ for whole-home standby units',
+      'Breaker box emits a faint buzzing sound or individual breakers feel warm to the touch during summer heat',
     ],
     processSteps: [
       {
@@ -599,34 +599,34 @@ export const services: ServicePage[] = [
         body: 'We upsize the exterior service mast, weatherhead, and entrance conductors to handle 200-amp continuous current.',
       },
       {
-        title: 'Modern 200A Panel & Breaker Installation',
-        body: 'We mount a brand-new panel, seat AFCI/GFCI breakers, and neatly terminate all existing circuits with copper bonding.',
+        title: 'Modern 200A Panel & Interlock Installation',
+        body: 'We mount a brand-new panel, seat AFCI/GFCI breakers, install the mechanical generator interlock slider, and run an outdoor 30A/50A generator inlet box.',
       },
       {
-        title: 'Whole-Home Surge Protector Integration',
-        body: 'We install a panel-mounted surge suppressor, test all circuit voltages under full load, and coordinate city inspection.',
+        title: 'Whole-Home Surge Protection & CenterPoint Inspection',
+        body: 'We install a Type 2 panel-mounted surge protector, test all circuit voltages under full load, and coordinate city inspection sign-off.',
       },
     ],
     necCodeNote:
-      'Sized strictly to NEC Article 220 (Service Load Calculations) and City of Houston CenterPoint requirements.',
+      'Sized strictly to NEC Article 220 (Service Load Calculations), NEC 702 (Optional Standby Systems), and CenterPoint Energy Service Standards.',
     relatedReview: {
-      author: 'Edward Le (Panel Upgrade Client)',
-      meta: '13 reviews · a year ago',
+      author: 'Lety Lopez (Houston Homeowner)',
+      meta: 'Local Guide · 11 reviews · a year ago',
       quote:
-        'Gus was a great electrician. He was punctual, clean, and his pricing was very competitive. I wish there were more honest electricians out there like him. Highly recommend for electrical panel replacement or upgrading!',
+        'Great job at explaining how it works, fast and friendly service, Interlock system installation, fault replacement breaker. Highly recommend Gustavo for electrical upgrades!',
     },
     commonNeeds: [
       {
-        title: '100-to-200-Amp Upgrades',
-        body: 'The most popular home upgrade in Houston, doubling electrical capacity to support modern families and HVAC demands.',
+        title: '100-to-200-Amp Heavy-Ups',
+        body: 'The most essential upgrade for Houston homes, doubling power capacity to support modern high-efficiency HVAC and EV charging.',
       },
       {
-        title: 'EV Charger & Appliance Capacity',
-        body: 'Creating the 40A to 60A breaker space needed for Level 2 EV chargers, electric dryers, and tankless water heaters.',
+        title: 'Manual Generator Interlock Systems',
+        body: 'Cost-effective, NEC-compliant generator backup that powers AC, refrigeration, and lights through an exterior power inlet box.',
       },
       {
-        title: 'Insurance & Safety Compliance',
-        body: 'Replacing hazardous Federal Pacific, Zinsco, or split-bus panels flagged during real estate transactions or home insurance renewals.',
+        title: 'Whole-Home Surge Suppression',
+        body: 'Type 2 surge protective devices installed directly at the panel bus to guard delicate electronics against lightning and grid switching surges.',
       },
     ],
     considerations: [
@@ -638,65 +638,70 @@ export const services: ServicePage[] = [
     servicesProvided: [
       '100-amp to 200-amp panel upgrades',
       '400-amp service heavy-ups for luxury homes',
+      'Generator interlock kit and exterior inlet box installation',
       'Service entrance mast and meter base upgrades',
       'Breaker modernization to AFCI/GFCI standards',
       'Whole-home panel surge protector installation',
-      'Dual grounding rod installation and bonding',
     ],
     faqs: [
+      {
+        question: 'When should a homeowner upgrade an electrical panel?',
+        answer:
+          'A homeowner should upgrade an electrical panel when moving to a modern 200-amp service, when adding high-amperage appliances like level 2 EV chargers or whole-house HVAC, when breakers trip regularly from standard simultaneous loads, or when the existing panel is outdated (such as 60-amp to 100-amp fuse boxes or Zinsco/Federal Pacific panels).',
+      },
+      {
+        question: 'Do I need a whole-house surge protector?',
+        answer:
+          'Yes. Whole-house surge protection installed directly inside your breaker panel shields high-value home electronics, HVAC compressors, smart appliances, and EV chargers from Houston grid spikes and lightning surges. Gus regularly recommends this as a proactive, high-value upgrade.',
+      },
+      {
+        question: 'What is the difference between a generator interlock and a transfer switch?',
+        answer:
+          'A mechanical interlock kit installs directly on your existing breaker panel and prevents the main utility breaker and the generator breaker from being turned on at the same time. It is significantly less expensive than a separate transfer switch and allows you the flexibility to power any circuit in your home (up to your generator’s wattage capacity) by simply toggling breakers.',
+      },
       {
         question: 'How long does an electrical panel upgrade take in Houston?',
         answer:
           'A typical panel upgrade is completed in a single day. Power is safely shut off in the morning while work is performed, and power is restored the same afternoon once CenterPoint coordinates reconnect. Call 832-484-0514 to discuss your home.',
-      },
-      {
-        question: 'Why should I upgrade from 100 amps to 200 amps?',
-        answer:
-          'A 100-amp service was designed for homes with fewer electrical devices. Today, central AC units, microwaves, EV chargers, computers, and appliances easily push 100-amp panels to their limit, leading to tripping breakers, voltage dips, and potential fire hazards.',
-      },
-      {
-        question: 'Will I need a permit for a panel upgrade in Houston?',
-        answer:
-          'Yes. Electrical panel upgrades require a permit and inspection in the City of Houston. S Branch Electric manages the permitting, utility disconnect coordination, and inspection process.',
       },
     ],
   },
   {
     slug: 'circuit-breaker-installation',
     path: '/circuit-breaker-installation-houston-tx',
-    name: 'Circuit Breaker Installation',
-    shortName: 'Breaker Installation',
-    ctaLabel: 'Call for Circuit Breaker Installation',
-    tagline: 'Circuit breaker installation, replacement, and diagnostics in Houston.',
+    name: 'Circuit Breaker Installation & Replacement',
+    shortName: 'Circuit Breaker Installation',
+    ctaLabel: 'Call for Breaker Installation',
+    tagline: 'Circuit breaker installation, physical replacements, and dedicated appliance breakers in Houston panels.',
     icon: 'ShieldCheck',
     cardImage:
       'https://images.pexels.com/photos/27928760/pexels-photo-27928760.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
     heroImage:
       'https://images.pexels.com/photos/27928760/pexels-photo-27928760.jpeg?auto=compress&cs=tinysrgb&h=900&w=1600',
-    cardAlt: 'Electrician adjusting a circuit breaker panel during a Houston breaker installation',
+    cardAlt: 'Electrician adjusting a circuit breaker panel during a Houston breaker diagnosis and replacement',
     heroAlt: 'Focused electrician adjusting circuit breaker panel during a breaker installation, technology and skill in action',
     metaTitle: 'Circuit Breaker Installation in Houston, TX | S Branch Electric',
     metaDescription:
-      'Circuit breaker installation in Houston, TX. New breakers, replacements, and AFCI/GFCI diagnostics by S Branch Electric. Call 832-484-0514.',
-    h1: 'Circuit Breaker Installation in Houston, TX',
+      'Circuit breaker installation and replacement in Houston, TX. New breaker seating, dedicated appliance lines, and AFCI/GFCI upgrades. Call 832-484-0514.',
+    h1: 'Circuit Breaker Installation & Replacement in Houston, TX',
     intro: [
-      'Circuit breakers are your electrical system’s critical front-line defense, cutting power instantly when an overload or short circuit occurs. S Branch Electric installs, diagnoses, and replaces circuit breakers for Houston homes and commercial buildings.',
-      'A circuit breaker that repeatedly trips, refuses to stay reset, or buzzes under load is signaling a real problem. Calling master electrician Gustavo at 832-484-0514 ensures the symptom is diagnosed and corrected safely.',
+      'A circuit breaker that repeatedly trips, refuses to stay reset, or buzzes under load is your electrical system’s critical distress signal. S Branch Electric provides fast, precise circuit breaker diagnostics and replacements for residential and commercial panels across Houston.',
+      'Instead of blindly swapping breakers or guessing, master electrician Gustavo Rivera uses precision digital amp-clamp meters and thermal infrared scanning to diagnose whether the issue is a failing breaker mechanism, an overloaded circuit, or a dangerous concealed short in your walls.',
     ],
     whatItIs: [
-      'A circuit breaker is an electromechanical switch designed to protect conductors from heat damage caused by overcurrent or short circuits. Unlike old fuses, circuit breakers can be reset after an event.',
-      'Breaker installation involves selecting the exact manufacturer-listed breaker type (Square D, Eaton, Siemens), matching the amperage to the conductor wire gauge, seating it firmly on the panel busbar, torquing the lug screw, and testing the trip mechanism.',
+      'Circuit breaker replacement involves diagnosing and replacing individual faulty or obsolete branch breakers inside an existing panel. Breakers wear out over decades of heat cycling, internal spring fatigue, and arc damage from repeated tripping events.',
+      'We supply and install genuine, manufacturer-listed breakers (Square D QO & Homeline, Eaton BR & CH, Siemens, GE) matching the exact busbar stab specifications of your panel. We also upgrade standard thermal-magnetic breakers to modern AFCI (Arc-Fault) and GFCI (Ground-Fault) combination breakers per latest NEC guidelines.',
     ],
     warningSigns: [
-      'A breaker trips repeatedly and refuses to stay reset when turned back on',
-      'Visible scorching, heat discoloration, or melted plastic on a breaker switch',
-      'Buzzing, humming, or sizzling sounds coming from inside the breaker panel',
-      'Adding a new dedicated appliance circuit requiring a new GFCI, AFCI, or dual-function breaker',
+      'A circuit breaker trips immediately upon resetting, indicating a direct short circuit',
+      'The breaker handle feels loose, springy, or will not stay in the "ON" position',
+      'Audible buzzing, humming, or sizzling sounds emanating from the breaker enclosure',
+      'Single room or washing machine circuit has lost power while other rooms remain energized',
     ],
     processSteps: [
       {
-        title: 'Thermal & Amp-Clamp Testing',
-        body: 'We test live current draw using digital amp clamps to distinguish between circuit overload, a wiring short, or a failing breaker.',
+        title: 'Thermal & Amp-Clamp Diagnostic Testing',
+        body: 'We test live current draw using digital amp clamps to distinguish between circuit overload, a wiring short, or internal breaker fatigue.',
       },
       {
         title: 'Busbar Inspection & Cleaning',
@@ -708,7 +713,7 @@ export const services: ServicePage[] = [
       },
       {
         title: 'Torque-Controlled Lug Fastening',
-        body: 'We torque terminal screws to exact specifications and test trip sensitivity to guarantee safe overcurrent protection.',
+        body: 'We torque terminal screws to exact inch-pound specifications and test trip sensitivity to guarantee safe overcurrent protection.',
       },
     ],
     necCodeNote:
@@ -721,16 +726,16 @@ export const services: ServicePage[] = [
     },
     commonNeeds: [
       {
-        title: 'Breaker Replacement',
-        body: 'Replacing worn-out, weak, or physically damaged breakers that no longer hold their rated load.',
+        title: 'Faulty & Buzzing Breaker Swaps',
+        body: 'Replacing worn-out, weak, or physically damaged breakers that hum under load or trip under minimal appliance draw.',
       },
       {
         title: 'AFCI & GFCI Breaker Upgrades',
-        body: 'Installing panel-level ground-fault and arc-fault protection to bring existing branch circuits up to modern code.',
+        body: 'Installing panel-level ground-fault and arc-fault protection to bring existing branch circuits up to modern life-safety codes.',
       },
       {
-        title: 'Dedicated Appliance Breakers',
-        body: 'Adding high-amperage 30A, 40A, or 50A double-pole breakers for dryers, air conditioners, and EV chargers.',
+        title: 'Laundry Room & Dedicated Breaker Repairs',
+        body: 'Diagnosing dedicated dryer and washer circuits that trip and restoring clean 120V/240V power quickly.',
       },
     ],
     considerations: [
@@ -740,18 +745,23 @@ export const services: ServicePage[] = [
       'GFCI and AFCI breakers provide whole-circuit protection directly from the panel enclosure.',
     ],
     servicesProvided: [
-      'Standard 15A and 20A single-pole breaker installation',
-      'Double-pole 240V breaker installation (30A–60A)',
-      'GFCI and AFCI arc-fault breaker installation',
-      'Dual-function breaker installation',
+      'Standard 15A and 20A single-pole breaker replacement',
+      'Double-pole 240V breaker replacement (30A–60A)',
+      'GFCI and AFCI arc-fault breaker installation and testing',
+      'Dual-function breaker retrofits',
       'Breaker diagnostic testing and load assessment',
-      'Buzzing and overheating breaker replacement',
+      'Buzzing and overheating breaker emergency replacement',
     ],
     faqs: [
       {
-        question: 'Why does my circuit breaker keep tripping in my Houston home?',
+        question: 'Why does my circuit breaker keep tripping?',
         answer:
-          'A breaker trips to prevent electrical fires caused by circuit overload or short circuits. Frequent tripping usually means too many high-wattage devices are on one circuit, a device has a short, or the breaker has weakened from age. Call 832-484-0514 to diagnose the cause safely.',
+          'A breaker trips to prevent electrical fires caused by circuit overload or short circuits. Frequent tripping usually means too many high-wattage devices are on one circuit, a device has an internal fault, or the breaker has weakened from age. Call 832-484-0514 to diagnose the cause safely.',
+      },
+      {
+        question: 'When should I replace an electrical breaker?',
+        answer:
+          'You should replace an electrical breaker if it feels hot to the touch, smells burnt, shows signs of charring, buzzes or hums loudly under normal load, fails to reset, or trips immediately even when all appliances on that circuit are unplugged. Breakers are mechanical safety devices with a finite lifespan and should be replaced by a licensed electrician.',
       },
       {
         question: 'Can you install a GFCI or AFCI breaker in my existing panel?',
@@ -883,10 +893,10 @@ export const services: ServicePage[] = [
       'https://images.pexels.com/photos/4981794/pexels-photo-4981794.jpeg?auto=compress&cs=tinysrgb&h=900&w=1600',
     cardAlt: 'Gloved hands using a drill to install a power outlet on a wall in Houston',
     heroAlt: 'Gloved hands using a drill to install a power outlet on a wall, focusing on precision and safety during installation',
-    metaTitle: 'Outlet & Switch Installation in Houston, TX | S Branch Electric',
+    metaTitle: 'Electrical Outlet Installation in Houston, TX | S Branch Electric',
     metaDescription:
-      'Outlet and switch installation in Houston, TX. GFCI outlets, grounded receptacles, dimmers, and smart switches by S Branch Electric. Call 832-484-0514.',
-    h1: 'Outlet & Switch Installation in Houston, TX',
+      'Electrical outlet installation in Houston, TX. GFCI outlets, grounded receptacles, dedicated 240V lines, and smart switches. Call 832-484-0514.',
+    h1: 'Electrical Outlet Installation & GFCI Upgrades in Houston, TX',
     intro: [
       'S Branch Electric installs, replaces, and relocates electrical outlets, receptacles, and switches for Houston homes and commercial spaces. Whether you need additional outlets for a home office, GFCI shock protection in a kitchen, or smart dimmer switches, proper installation ensures reliable safety.',
       'Outlets and switches are the most frequently used parts of your electrical system. Loose receptacles, ungrounded two-prong outlets, and worn switch contacts create hazardous arcing. Gus installs commercial-grade, tamper-resistant devices that last.',
@@ -957,9 +967,9 @@ export const services: ServicePage[] = [
     ],
     faqs: [
       {
-        question: 'Can you add an outlet anywhere in my Houston home?',
+        question: 'Why are my electrical outlets not working?',
         answer:
-          'In most cases, yes. Adding an outlet involves routing wiring through wall cavities from an existing circuit or the main panel to the new location. We verify that the circuit has adequate spare capacity before adding new receptacles.',
+          'Outlets typically stop working due to a tripped GFCI receptacle (which may be located upstream in another bathroom or garage on the same circuit), a tripped breaker, loose wire connections behind the outlet, or a burnt back-stab terminal. S Branch Electric uses professional multimeters and circuit tracers to pinpoint the failure and repair the circuit safely.',
       },
       {
         question: 'Why should I replace my old two-prong outlets in Houston?',
@@ -967,9 +977,9 @@ export const services: ServicePage[] = [
           'Two-prong outlets lack an equipment grounding conductor. Upgrading to grounded, GFCI-protected receptacles prevents electrical shock, protects expensive computers and smart TVs from voltage spikes, and meets current NEC safety codes.',
       },
       {
-        question: 'Can you install smart switches in an older Houston home?',
+        question: 'Can you add an outlet anywhere in my Houston home?',
         answer:
-          'Most smart switches require a neutral wire inside the switch box. In older Houston homes built before 1980, switch boxes often only contain a switch loop without a neutral. We inspect your switch box and can pull a neutral conductor if needed.',
+          'In most cases, yes. Adding an outlet involves routing wiring through wall cavities from an existing circuit or the main panel to the new location. We verify that the circuit has adequate spare capacity before adding new receptacles.',
       },
     ],
   },
@@ -987,23 +997,25 @@ export const services: ServicePage[] = [
       'https://images.pexels.com/photos/14319099/pexels-photo-14319099.jpeg?auto=compress&cs=tinysrgb&h=900&w=1600',
     cardAlt: 'Digital multimeter with electrical tools and circuit breakers used for Houston electrical troubleshooting',
     heroAlt: 'Electrician using a multimeter to diagnose and fix wiring in a control panel during an electrical troubleshooting service call',
-    metaTitle: 'Electrical Troubleshooting & Repairs in Houston, TX | S Branch Electric',
+    metaTitle: 'Electrical Troubleshooting in Houston, TX | S Branch Electric',
     metaDescription:
-      'Electrical troubleshooting and repairs in Houston, TX. Diagnose power outages, tripping breakers, and faulty wiring with S Branch Electric. Call 832-484-0514.',
-    h1: 'Electrical Troubleshooting & Repairs in Houston, TX',
+      'Electrical troubleshooting in Houston, TX. Diagnose tripping breakers, sudden power outages, flickering lights, and wiring faults. Call 832-484-0514.',
+    h1: 'Electrical Troubleshooting & Diagnostics in Houston, TX',
     intro: [
-      'When your power goes out, breakers trip without warning, or outlets stop working, S Branch Electric delivers rapid, accurate diagnostics and lasting repairs. Master electrician Gustavo uses professional diagnostic equipment to trace faults to their exact root cause.',
-      'Electrical problems are not only frustrating—they can be serious fire hazards. Rather than applying temporary bandaids, we identify whether the issue is a loose neutral, an overloaded branch, or a failed breaker, and provide a clean, code-compliant fix.',
+      'Electrical problems can affect your home’s safety, comfort, and everyday operation. From frequently tripping circuit breakers to outlets that suddenly stop working, accurately identifying the root cause is critical before attempting any repairs.',
+      'S Branch Electric provides professional electrical troubleshooting services for homeowners and businesses in Houston, TX. Master electrician Gustavo ("Gus") uses commercial-grade diagnostic equipment to systematically identify electrical issues, determine the safest repair solution, and explain the recommended work clearly before proceeding.',
     ],
     whatItIs: [
-      'Electrical troubleshooting is the systematic diagnostic procedure of identifying why an electrical circuit is malfunctioning. Using digital multimeters, circuit tracers, and thermal scanners, we evaluate voltage drops, ground fault resistance, and continuity throughout the circuit path.',
-      'Once the root failure is pinpointed—whether a burned wire nut in an attic junction box, a tripped GFCI upstream, or a fatigued breaker stab—we execute a permanent repair to restore safe power.',
+      'Electrical troubleshooting is the systematic diagnostic procedure of identifying why an electrical circuit is malfunctioning. Using digital multimeters, circuit tracers, and thermal scanners, we evaluate voltage drops, ground fault resistance, and neutral continuity throughout the entire circuit path.',
+      'Our troubleshooting process starts by listening to the problem, inspecting the relevant components, pinpointing possible causes—whether a burned wire nut in an attic junction box, a tripped GFCI upstream, or a fatigued breaker stab—and executing a permanent, code-compliant repair.',
     ],
     warningSigns: [
-      'Outlets in an entire room suddenly stop working while the breaker looks ON',
-      'Lights flickering or dimming when the air conditioner or refrigerator kicks on',
-      'GFCI outlet trips immediately upon reset without any appliances plugged in',
-      'Burning electrical odor, buzzing sounds, or charred outlet faceplates',
+      'Circuit breakers that trip repeatedly or fuses that blow frequently',
+      'Outlets or switches that suddenly lose power or stop working',
+      'Flickering or inconsistent lighting when heavy appliances start up',
+      'Burning electrical odor, unusual heat, buzzing sounds, or sparks from panels or outlets',
+      'Electrical circuits that intermittently cut off or show voltage drop',
+      'Unusual electrical behavior requiring prompt professional inspection',
     ],
     processSteps: [
       {
@@ -1046,10 +1058,12 @@ export const services: ServicePage[] = [
       },
     ],
     considerations: [
+      'Safety Warning: Never open, probe, or attempt to work on an energized electrical panel or live service conductors yourself.',
+      'Repeated breaker trips, burning smells, heat around faceplates, or sparking should never be ignored—shut off the circuit and seek qualified help.',
       'Houston thunderstorms frequently cause water intrusion into outdoor meters and breaker panels.',
       'Older homes with backstabbed wire connections behind outlets are prone to sudden connection failure.',
       'A GFCI that will not reset is often protecting you from a real downstream ground fault.',
-      'Repeatedly resetting a tripping breaker without fixing the root cause can melt wire insulation and cause a fire.',
+      'Repeatedly resetting a tripping breaker without fixing the root cause can melt wire insulation and ignite a fire.',
     ],
     servicesProvided: [
       'Tripping breaker and blown fuse diagnosis',
@@ -1061,19 +1075,431 @@ export const services: ServicePage[] = [
     ],
     faqs: [
       {
-        question: 'My circuit breaker keeps tripping. What should I do right now?',
+        question: 'Why does my circuit breaker keep tripping?',
         answer:
-          'Stop resetting the breaker repeatedly and call 832-484-0514. A tripping breaker is doing its job by cutting power to an unsafe circuit. Repeatedly resetting it can ignite an electrical fire behind your drywall. Call Gus to diagnose what is happening.',
+          'A circuit breaker trips primarily for three reasons: a circuit overload (drawing more amps than the circuit rating), a short circuit (hot wire touching neutral or ground), or a ground fault. If a breaker trips immediately after resetting, stop forcing it and call Gustavo at S Branch Electric for safe diagnostics.',
       },
       {
-        question: 'Some outlets in my Houston home stopped working. Can you fix that?',
+        question: 'What causes lights to flicker in a house?',
         answer:
-          'Yes. Dead outlets are one of our most common troubleshooting service calls. The cause is often a tripped GFCI outlet upstream, a loose backstab connection behind a receptacle, or a damaged breaker. We locate and repair the connection promptly.',
+          'Lights flicker due to sudden voltage drops when large appliances (like an air conditioner or dryer) kick on, loose neutral or ground wiring in the panel, corroded service entrance connections from the utility, or incompatible LED dimmer switches. Persistent or room-wide flickering is a fire hazard requiring immediate professional troubleshooting.',
       },
       {
-        question: 'Do you diagnose flickering lights in Houston?',
+        question: 'Why are my electrical outlets not working?',
         answer:
-          'Yes. Flickering lights can indicate a loose neutral connection in your breaker panel, an overloaded branch circuit, or incompatible LED dimmers. We test the voltage and connections to eliminate the hazard.',
+          'Dead outlets are one of our most common troubleshooting service calls. The cause is often a tripped GFCI outlet upstream, a loose backstab connection behind a receptacle, or a damaged breaker. S Branch Electric tests and isolates the issue to safely restore power.',
+      },
+    ],
+  },
+  {
+    slug: 'electrical-repair',
+    path: '/electrical-repair-houston-tx',
+    name: 'Electrical Repair',
+    shortName: 'Electrical Repair',
+    ctaLabel: 'Call for Electrical Repair',
+    tagline: 'Fast, code-compliant residential and light commercial electrical repairs across Houston.',
+    icon: 'Wrench',
+    cardImage:
+      'https://images.pexels.com/photos/6349399/pexels-photo-6349399.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    heroImage:
+      'https://images.pexels.com/photos/14319099/pexels-photo-14319099.jpeg?auto=compress&cs=tinysrgb&h=900&w=1600',
+    cardAlt: 'Master electrician repairing damaged electrical wiring and components in Houston home',
+    heroAlt: 'Professional electrician repairing circuit wiring inside a residential breaker panel in Houston',
+    metaTitle: 'Electrical Repair in Houston, TX | S Branch Electric',
+    metaDescription:
+      'Professional electrical repair in Houston, TX. Emergency circuit repairs, dead outlets, breaker fixes, and wiring repairs by S Branch Electric. Call 832-484-0514.',
+    h1: 'Electrical Repair Services in Houston, TX',
+    intro: [
+      'When electrical components fail, breakers refuse to reset, or outlets buzz and spark, S Branch Electric provides fast, dependable electrical repairs throughout Greater Houston. Master electrician Gustavo ("Gus") Rivera diagnoses and repairs faults quickly to restore safe power.',
+      'We treat electrical safety with extreme care. Whether addressing storm-damaged equipment, burned wire connections, or faulty switches, every repair adheres strictly to City of Houston building codes and NEC safety requirements.',
+    ],
+    whatItIs: [
+      'Electrical repair involves repairing or replacing compromised components within your property’s electrical system. This includes fixing loose neutral splices, replacing damaged breakers, rebuilding corroded service drops, repairing short circuits, and restoring lost power to branch circuits.',
+      'Unlike temporary DIY fixes, professional electrical repair identifies the underlying root cause of the breakdown to prevent recurring faults or hidden electrical fire hazards.',
+    ],
+    warningSigns: [
+      'Frequent circuit breaker tripping or blown fuses under everyday household use',
+      'Charred, discolored, or warm outlet faceplates and switch covers',
+      'Persistent burning plastic odor near electrical panels or receptacles',
+      'Buzzing, sizzling, or crackling sounds coming from behind walls or switches',
+    ],
+    processSteps: [
+      {
+        title: 'Safe Electrical Isolation & Inspection',
+        body: 'We de-energize the affected circuit, verify zero voltage with calibrated multimeters, and inspect all connections.',
+      },
+      {
+        title: 'Root-Cause Diagnostic Analysis',
+        body: 'We test wire continuity, line resistance, and neutral stability to pinpoint the exact failure point.',
+      },
+      {
+        title: 'Commercial-Grade Component Repair',
+        body: 'We replace damaged breakers, wiring segments, or devices using high-grade copper materials and proper torque.',
+      },
+      {
+        title: 'Full Circuit Load Testing & Verification',
+        body: 'We re-energize, test voltage under active load, verify ground-fault protection, and ensure code compliance.',
+      },
+    ],
+    necCodeNote:
+      'All repairs comply with NEC Article 110 (Requirements for Electrical Installations) and Article 250 (Grounding and Bonding).',
+    relatedReview: {
+      author: 'Marc Barnhill (Houston Homeowner)',
+      meta: '3 reviews · Emergency Repair · Verified Client',
+      quote:
+        'Came out within an hour of me contacting him and repaired quickly. I will definitely use them again. Outstanding service and quick and quality repair!',
+    },
+    commonNeeds: [
+      {
+        title: 'Emergency Breaker & Fuse Repair',
+        body: 'Repairing or replacing breakers that buzz, fail to reset, or trip under normal appliance loads.',
+      },
+      {
+        title: 'Dead Outlet & Switch Fixes',
+        body: 'Restoring power to non-working receptacles caused by broken neutrals or failed backstabbed connections.',
+      },
+      {
+        title: 'Storm & Surge Damage Repair',
+        body: 'Fixing weatherheads, exterior disconnects, and service masts damaged by fallen tree branches or grid surges.',
+      },
+    ],
+    considerations: [
+      'Never attempt to work inside an energized electrical panel or repair live conductors yourself.',
+      'A repeatedly tripping breaker is a warning sign of an active hazard—stop resetting it and call for repair.',
+      'Loose wiring connections generate micro-arcing that can exceed 3,000°F and ignite wall framing.',
+    ],
+    servicesProvided: [
+      'Emergency electrical diagnostics and repairs',
+      'Circuit breaker and fuse box repairs',
+      'Dead outlet, switch, and GFCI receptacle repairs',
+      'Loose neutral and ground fault remediation',
+      'Appliance circuit and dedicated line repairs',
+      'Storm damage service entrance repairs',
+    ],
+    faqs: [
+      {
+        question: 'Do you offer emergency electrical repair in Houston?',
+        answer:
+          'Yes. Gustavo frequently assists Houston homeowners with urgent repairs, including blown appliance circuits, dead panels, and sparking equipment. Call 832-484-0514 directly for immediate assistance.',
+      },
+      {
+        question: 'What is the most common residential electrical repair?',
+        answer:
+          'The most common repairs are tripped GFCI outlets, loose backstab wire connections behind receptacles, and fatigued circuit breakers that trip prematurely.',
+      },
+      {
+        question: 'Is it dangerous to wait on repairing an electrical problem?',
+        answer:
+          'Yes. Electrical faults rarely resolve on their own. Loose connections and overloaded circuits generate intense heat behind walls, significantly increasing electrical fire risk.',
+      },
+    ],
+  },
+  {
+    slug: 'electrical-panel-replacement',
+    path: '/electrical-panel-replacement-houston-tx',
+    name: 'Electrical Panel Replacement',
+    shortName: 'Panel Replacement',
+    ctaLabel: 'Call for Panel Replacement',
+    tagline: 'Replace outdated Federal Pacific, Zinsco, and corroded breaker boxes in Houston homes.',
+    icon: 'LayoutGrid',
+    cardImage:
+      'https://images.pexels.com/photos/27928760/pexels-photo-27928760.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    heroImage:
+      'https://images.pexels.com/photos/27928760/pexels-photo-27928760.jpeg?auto=compress&cs=tinysrgb&h=900&w=1600',
+    cardAlt: 'Electrician replacing a residential breaker box with modern circuit breakers in Houston',
+    heroAlt: 'Close-up of new circuit breaker box installation replacing an obsolete panel in Houston',
+    metaTitle: 'Electrical Panel Replacement in Houston, TX | S Branch Electric',
+    metaDescription:
+      'Safe electrical panel replacement in Houston, TX. Replace outdated Federal Pacific, Zinsco, and rusted breaker boxes. Licensed Master Electrician. Call 832-484-0514.',
+    h1: 'Electrical Panel Replacement Services in Houston, TX',
+    intro: [
+      'Your electrical panel is the central nervous system of your home. If your breaker box is outdated, rusted from Gulf Coast humidity, or manufactured by recalled brands like Federal Pacific Electric (FPE) or Zinsco, replacing it is vital for household safety.',
+      'S Branch Electric specializes in safe, code-compliant electrical panel replacements across Houston. Master electrician Gustavo Rivera completes panel replacements cleanly, coordinating permits and utility reconnects for a smooth, single-day transition.',
+    ],
+    whatItIs: [
+      'An electrical panel replacement is a modernized swap of your existing breaker enclosure. We replace obsolete bus bars, damaged main breakers, and aging branch circuit breakers with a brand-new, modern enclosure equipped with plug-on neutral bars and Type 2 whole-house surge protection.',
+      'Unlike a heavy-up amperage upgrade (which expands incoming utility service to 200A or 400A), a panel replacement updates the hardware and safety technology while maintaining appropriate service capacity.',
+    ],
+    warningSigns: [
+      'Panel manufactured by Federal Pacific Electric (Stab-Lok), Zinsco, or Challenger',
+      'Visible rust, water stains, or corrosion inside or outside the breaker enclosure',
+      'Breakers that feel hot to the touch or emit a faint ozone/burning plastic smell',
+      'Breakers that fail to trip during short circuits or refuse to reset after tripping',
+    ],
+    processSteps: [
+      {
+        title: 'Safety Evaluation & Circuit Mapping',
+        body: 'We audit your current panel, identify all branch circuits, and verify neutral and ground separation.',
+      },
+      {
+        title: 'City Permitting & Power Disconnect',
+        body: 'We pull required municipal permits and coordinate safe utility power disconnection with CenterPoint Energy.',
+      },
+      {
+        title: 'New Enclosure & Breaker Installation',
+        body: 'We install a heavy-gauge modern enclosure, new bus bars, commercial-grade breakers, and surge protection.',
+      },
+      {
+        title: 'Grounding Upgrade & Power Release',
+        body: 'We install dual 8-foot copper ground rods to meet NEC 250, pass city inspection, and restore utility power.',
+      },
+    ],
+    necCodeNote:
+      'Panel replacements meet NEC Article 230 (Services), Article 250 (Grounding), and NEC 230.67 surge protection mandates.',
+    relatedReview: {
+      author: 'Norma Toledo (Houston Client)',
+      meta: 'Storm Recovery · Panel Replacement · 5.0 Stars',
+      quote:
+        'Great communication, was quick to show up for emergency repair and took care of replacing our storm-damaged panel with quality work. Highly recommended Gus and S Branch Electric!',
+    },
+    commonNeeds: [
+      {
+        title: 'FPE & Zinsco Hazard Replacement',
+        body: 'Replacing hazardous obsolete breaker boxes known to fail under overload conditions and drop insurance coverage.',
+      },
+      {
+        title: 'Corroded Outdoor Enclosure Swaps',
+        body: 'Replacing weather-beaten, rusted exterior breaker boxes with NEMA 3R outdoor weatherproof enclosures.',
+      },
+      {
+        title: 'Full Panel Slot Exhaustion',
+        body: 'Replacing crowded 20-circuit panels with spacious 40-circuit or 42-circuit panels to allow for future upgrades.',
+      },
+    ],
+    considerations: [
+      'Insurance companies frequently deny coverage or charge penalties for homes with active Federal Pacific or Zinsco panels.',
+      'A typical residential panel replacement is completed in a single working day with power restored by afternoon.',
+      'City of Houston permits and utility disconnect coordination are required for legal, safe panel replacement.',
+    ],
+    servicesProvided: [
+      'Federal Pacific Electric (FPE) panel replacement',
+      'Zinsco and Challenger breaker box replacement',
+      'Rusted exterior NEMA 3R weatherproof panel replacement',
+      'Whole-house surge protector integration',
+      'Dual copper ground rod bonding system installation',
+      'City permitting and CenterPoint disconnect coordination',
+    ],
+    faqs: [
+      {
+        question: 'Why should I replace a Federal Pacific or Zinsco panel?',
+        answer:
+          'Independent testing shows that Federal Pacific Stab-Lok and Zinsco breakers fail to trip in up to 25% of overload conditions. Instead of cutting power, they can jam and ignite electrical fires. Most Texas insurance underwriters require their replacement.',
+      },
+      {
+        question: 'How long will my power be off during a panel replacement?',
+        answer:
+          'Power is typically shut off around 8:00 AM while our team replaces the equipment. Power is safely inspected and restored the same afternoon.',
+      },
+      {
+        question: 'How much does it cost to replace an electrical panel in Houston?',
+        answer:
+          'Costs typically range from $1,800 to $3,500 depending on panel size, enclosure type (indoor vs outdoor NEMA 3R), circuit count, and municipal permit fees. Call Gus at 832-484-0514 for an honest, upfront quote.',
+      },
+    ],
+  },
+  {
+    slug: 'surge-protector-installation',
+    path: '/surge-protector-installation-houston-tx',
+    name: 'Whole-House Surge Protector Installation',
+    shortName: 'Surge Protection',
+    ctaLabel: 'Call for Surge Protection',
+    tagline: 'Shield HVAC systems, smart appliances, and electronics from Houston grid surges and lightning.',
+    icon: 'ShieldCheck',
+    cardImage:
+      'https://images.pexels.com/photos/27928762/pexels-photo-27928762.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    heroImage:
+      'https://images.pexels.com/photos/27928762/pexels-photo-27928762.jpeg?auto=compress&cs=tinysrgb&h=900&w=1600',
+    cardAlt: 'Type 2 whole-house surge protective device installed inside Houston electrical breaker panel',
+    heroAlt: 'Electrician installing a whole home surge protector into an electrical panel in Houston',
+    metaTitle: 'Whole-House Surge Protector Installation in Houston, TX | S Branch Electric',
+    metaDescription:
+      'Whole-house surge protector installation in Houston, TX. Protect AC units, smart appliances, and EV chargers from lightning and grid spikes. Call 832-484-0514.',
+    h1: 'Whole-House Surge Protector Installation in Houston, TX',
+    intro: [
+      'Houston leads the nation in convective lightning strikes and power grid fluctuations. While plug-in power strips protect only the small gadgets plugged directly into them, a Type 2 Whole-House Surge Protective Device (SPD) shields your entire home’s electrical infrastructure.',
+      'S Branch Electric installs commercial-grade whole-house surge protectors directly inside your main electrical panel. Master electrician Gustavo Rivera ensures your expensive HVAC systems, inverter compressors, EV chargers, and smart appliances are safe from damaging voltage spikes.',
+    ],
+    whatItIs: [
+      'A whole-house surge protector is a hardwired device connected directly to your main electrical panel on a dedicated double-pole breaker. When an incoming transient voltage spike arrives from lightning, utility switching, or major appliances cycling off, the SPD diverts the excess electrical energy safely to ground in less than a nanosecond.',
+      'Starting with the 2020 National Electrical Code (NEC Article 230.67), whole-home surge protection is now mandatory on all new residential electrical services and panel upgrades.',
+    ],
+    warningSigns: [
+      'Frequent power grid flickers or CenterPoint substation switching events in your neighborhood',
+      'Electronic appliances or smart TVs experiencing glitching, rebooting, or shortened lifespans',
+      'Recent installation of high-value equipment like central AC units, heat pumps, or Level 2 EV chargers',
+      'Existing electrical panel lacks hardwired Type 2 surge protective devices',
+    ],
+    processSteps: [
+      {
+        title: 'Panel Assessment & Grounding Audit',
+        body: 'We test your panel bus, verify spare breaker capacity, and inspect ground rod resistance to ensure effective surge dissipation.',
+      },
+      {
+        title: 'Type 2 Commercial SPD Selection',
+        body: 'We specify a heavy-duty Type 2 surge protective device rated for 50kA to 100kA surge current capacity per phase.',
+      },
+      {
+        title: 'Direct Bus Bar & Neutral Installation',
+        body: 'We mount the SPD with minimal lead length directly adjacent to the main breaker for instantaneous surge suppression.',
+      },
+      {
+        title: 'Diagnostic LED Verification & Testing',
+        body: 'We verify active operational status indicators and test phase-to-neutral and neutral-to-ground clamping performance.',
+      },
+    ],
+    necCodeNote:
+      'All installations comply with NEC Article 230.67 (Surge Protection for Dwelling Units) and UL 1449 4th Edition safety standards.',
+    relatedReview: {
+      author: 'Aaron S. (Spring Branch Homeowner)',
+      meta: '6 reviews · Spring Branch Resident · Price: $1–200',
+      quote:
+        'Gus was fantastic to work with. He inspected our breaker box and gave me helpful, practical advice, including recommending a whole-house surge protector as a smart future upgrade — no pressure, just solid guidance.',
+    },
+    commonNeeds: [
+      {
+        title: 'HVAC & Inverter Compressor Protection',
+        body: 'Protecting expensive variable-speed air conditioning compressors from grid voltage spikes during summer storms.',
+      },
+      {
+        title: 'Smart Appliance & Home Network Defense',
+        body: 'Guarding smart refrigerators, induction cooktops, home theaters, and computers from continuous micro-surges.',
+      },
+      {
+        title: 'EV Charging Station Safeguards',
+        body: 'Preventing grid transients from damaging high-voltage onboard electric vehicle battery management chargers.',
+      },
+    ],
+    considerations: [
+      'Standard power strips provide zero protection for hardwired appliances like AC units, ovens, water heaters, and washers.',
+      'Roughly 80% of electrical surges originate internally inside your home whenever large motors cycle on and off.',
+      'Effective surge protection requires a low-resistance grounding electrode system (dual ground rods).',
+    ],
+    servicesProvided: [
+      'Type 2 whole-house surge protective device installation',
+      'Main distribution panel SPD retrofits',
+      'Grounding electrode resistance testing and bonding',
+      'Dedicated double-pole breaker surge feed installation',
+      'Subpanel surge suppression integration',
+      'Post-lightning strike electrical diagnostic evaluations',
+    ],
+    faqs: [
+      {
+        question: 'Do I still need power strips if I have a whole-house surge protector?',
+        answer:
+          'Yes. Best practice in electrical engineering is "tiered protection." The whole-house SPD stops massive incoming grid spikes at the panel, while point-of-use surge strips absorb small localized micro-surges at sensitive computer equipment.',
+      },
+      {
+        question: 'How long does a whole-house surge protector last?',
+        answer:
+          'Most quality Type 2 surge protectors last 5 to 10 years depending on local lightning frequency. They feature external diagnostic LEDs that indicate when internal metal-oxide varistors (MOVs) are active and functioning.',
+      },
+      {
+        question: 'How much does whole-house surge protector installation cost in Houston?',
+        answer:
+          'A complete professional installation by a Master Electrician typically costs between $350 and $650 including the commercial-grade SPD unit, dedicated breaker, and installation labor.',
+      },
+    ],
+  },
+  {
+    slug: 'generator-interlock-installation',
+    path: '/generator-interlock-installation-houston-tx',
+    name: 'Generator Interlock Kit Installation',
+    shortName: 'Generator Interlock',
+    ctaLabel: 'Call for Generator Interlock',
+    tagline: 'Safe, affordable hurricane backup power for your entire Houston home using your portable generator.',
+    icon: 'Zap',
+    cardImage:
+      'https://images.pexels.com/photos/27928760/pexels-photo-27928760.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    heroImage:
+      'https://images.pexels.com/photos/27928760/pexels-photo-27928760.jpeg?auto=compress&cs=tinysrgb&h=900&w=1600',
+    cardAlt: 'Mechanical generator interlock kit installed on electrical panel with safety slider',
+    heroAlt: 'Electrician installing a generator interlock and 50A exterior power inlet in Houston',
+    metaTitle: 'Generator Interlock Installation in Houston, TX | S Branch Electric',
+    metaDescription:
+      'Generator interlock kit installation in Houston, TX. Safe, code-compliant storm backup power for your home. Exterior 30A/50A inlet boxes. Call 832-484-0514.',
+    h1: 'Generator Interlock Kit Installation in Houston, TX',
+    intro: [
+      'When hurricanes, tropical storms, and grid freezes strike Houston, having reliable backup power is essential. A mechanical generator interlock kit is the safest, most flexible, and most affordable way to power your home using a portable generator.',
+      'S Branch Electric installs custom-machined generator interlock kits and exterior weatherproof power inlet boxes. Master electrician Gustavo Rivera ensures your home is hurricane-ready, code-compliant, and completely safe from dangerous electrical backfeeding.',
+    ],
+    whatItIs: [
+      'A generator interlock is a precision-machined mechanical safety bracket installed directly onto your electrical panel faceplate. A sliding steel plate physically prevents the generator breaker from being turned ON unless the main utility breaker is first switched OFF.',
+      'Unlike restrictive transfer switches that limit you to 6 or 8 hardwired circuits, an interlock kit energizes your entire panel. This allows you the flexibility to power any circuit in your home—refrigerator, lights, internet, TV, or well pump—simply by flipping breakers.',
+    ],
+    warningSigns: [
+      'Relying on dangerous extension cords snaked through open windows during power outages',
+      'Houston hurricane season approaching without a safe emergency power connection',
+      'Desire to power household lights, fans, and appliances without purchasing an expensive whole-house standby generator',
+      'Existing electrical panel lacks safe mechanical interlock safety devices',
+    ],
+    processSteps: [
+      {
+        title: 'Panel Assessment & Wattage Planning',
+        body: 'We inspect your breaker panel brand, identify a top-right or top-left breaker slot, and calculate generator wattage limits.',
+      },
+      {
+        title: 'Exterior Power Inlet Box Mounting',
+        body: 'We install a heavy-duty NEMA 3R weatherproof 30A or 50A power inlet box on your exterior wall near your generator staging area.',
+      },
+      {
+        title: 'Conduit & Backfeed Breaker Wiring',
+        body: 'We pull heavy-gauge copper conductors through protective conduit to a dedicated double-pole backfeed breaker in your panel.',
+      },
+      {
+        title: 'Interlock Bracket Fitment & Safety Test',
+        body: 'We secure the custom interlock plate, test the physical mechanical lockout mechanism, and simulate a complete generator transfer.',
+      },
+    ],
+    necCodeNote:
+      'All generator interlock systems strictly satisfy NEC Article 702 (Optional Standby Systems) to prevent utility backfeeding.',
+    relatedReview: {
+      author: 'Melissa D. Zier (Memorial Client)',
+      meta: 'Local Guide · 25 reviews · Verified Homeowner',
+      quote:
+        'Gus Rivera at Spring Branch Electric has consistently demonstrated excellent communication, professionalism, and top-notch work. He handled updates to power our home with a whole-house generator and walked us through every step thoroughly.',
+    },
+    commonNeeds: [
+      {
+        title: 'Hurricane & Freeze Emergency Readiness',
+        body: 'Keeping refrigerators running, lights on, and phones charged during extended Houston hurricane power outages.',
+      },
+      {
+        title: 'Portable Dual-Fuel Generator Hookups',
+        body: 'Connecting 7,500W to 13,000W gas or propane portable generators cleanly without indoor extension cord trip hazards.',
+      },
+      {
+        title: 'Affordable Alternative to Transfer Switches',
+        body: 'Achieving whole-panel power flexibility at a fraction of the cost of a traditional 8-circuit transfer switch.',
+      },
+    ],
+    considerations: [
+      'Backfeeding a panel without an interlock kit is illegal and can electrocute utility line workers restoring power.',
+      'Portable generators must always run outdoors at least 15 to 20 feet away from windows to prevent carbon monoxide poisoning.',
+      'Sizing the inlet box (30-amp vs 50-amp) depends on your generator’s running and starting peak wattage.',
+    ],
+    servicesProvided: [
+      'Mechanical generator interlock kit installation',
+      'Exterior 30A and 50A weatherproof generator inlet boxes',
+      'Dedicated generator backfeed breaker installation',
+      'Heavy-gauge copper generator feeder wiring',
+      'Panel surge protection integration for storm safety',
+      'Operational walkthrough and generator power-up demonstration',
+    ],
+    faqs: [
+      {
+        question: 'Why is an interlock kit better than a transfer switch?',
+        answer:
+          'A transfer switch only lets you power the 6 to 10 specific circuits wired into its box. A generator interlock kit gives you access to every single circuit in your main panel. You can easily switch power between rooms as needed, and it costs hundreds of dollars less.',
+      },
+      {
+        question: 'What size generator inlet box do I need: 30-amp or 50-amp?',
+        answer:
+          'Generators up to 7,500 running watts typically use a 30-amp inlet (NEMA L14-30). Generators above 8,000 watts usually use a 50-amp inlet (CS6375 or NEMA 14-50). We help you match the inlet to your generator.',
+      },
+      {
+        question: 'Can a portable generator run my central air conditioning with an interlock?',
+        answer:
+          'A large portable generator (9,000W to 12,000W+) can often run a 3-ton to 4-ton central AC if a "Soft Start" kit is installed on the AC compressor to reduce inrush starting amps. Otherwise, smaller portable generators run window units, refrigerators, and lights easily.',
       },
     ],
   },

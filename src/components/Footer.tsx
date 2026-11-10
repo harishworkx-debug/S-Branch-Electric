@@ -48,6 +48,7 @@ export function Footer() {
               <li><Link to="/" className="transition-colors hover:text-electric-400">Home</Link></li>
               <li><Link to="/about" className="transition-colors hover:text-electric-400">About Us</Link></li>
               <li><Link to="/reviews" className="transition-colors hover:text-electric-400">Reviews</Link></li>
+              <li><Link to="/blog" className="transition-colors hover:text-electric-400">Electrical Guides &amp; Blog</Link></li>
               <li><Link to="/contact" className="transition-colors hover:text-electric-400">Contact</Link></li>
               <li><Link to="/services" className="transition-colors hover:text-electric-400">All Services</Link></li>
               <li><Link to="/service-areas" className="transition-colors hover:text-electric-400">Service Areas</Link></li>
@@ -111,9 +112,8 @@ export function Footer() {
           <p>
             &copy; {new Date().getFullYear()} {BUSINESS.name}. All rights reserved. {BUSINESS.category}.
           </p>
-          <p className="mt-1.5 text-charcoal-600">
-            S Branch Electric is an electrical installation service based in Houston, TX. Call {BUSINESS.phone} to
-            discuss your electrical project and confirm service availability.
+          <p className="mt-1.5 text-charcoal-400">
+            S Branch Electric is a locally owned electrical installation and repair service based at 1837 Huge Oaks St in the Spring Branch community of Houston, TX (77055). Independent local business; not affiliated with Spring Branch Electric Company in Comal County / Hill Country. Call {BUSINESS.phone} for service.
           </p>
         </div>
       </div>

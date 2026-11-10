@@ -13,11 +13,15 @@ import {
   Quote,
   Clock,
   BookOpen,
+  Award,
+  FileText,
+  UserCheck,
 } from 'lucide-react';
 import { useSeo } from '@/hooks/useSeo';
 import { BUSINESS } from '@/data/business';
 import { services, getServiceByPath } from '@/data/services';
 import { serviceAreas } from '@/data/serviceAreas';
+import { projectCaseStudies } from '@/data/caseStudies';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { CtaSection } from '@/components/CtaSection';
 import { Reveal } from '@/components/Reveal';
@@ -33,26 +37,48 @@ export function ServicePage() {
 
   const Icon = getServiceIcon(service.icon);
   const related = services.filter((s) => s.slug !== service.slug).slice(0, 5);
+  const relevantCaseStudy = projectCaseStudies.find(
+    (c) => c.serviceSlug === service.slug || c.servicePath === service.path
+  );
 
   const schema = {
     '@context': 'https://schema.org',
-    '@type': 'Service',
-    name: service.name,
-    description: service.metaDescription,
-    provider: {
-      '@type': 'Electrician',
-      name: BUSINESS.name,
-      telephone: '+18324840514',
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: BUSINESS.street,
-        addressLocality: BUSINESS.city,
-        addressRegion: BUSINESS.state,
-        postalCode: BUSINESS.zip,
-        addressCountry: 'US',
+    '@graph': [
+      {
+        '@type': 'Service',
+        name: service.name,
+        description: service.metaDescription,
+        provider: {
+          '@type': 'Electrician',
+          name: BUSINESS.name,
+          telephone: '+18324840514',
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: BUSINESS.street,
+            addressLocality: BUSINESS.city,
+            addressRegion: BUSINESS.state,
+            postalCode: BUSINESS.zip,
+            addressCountry: 'US',
+          },
+        },
+        areaServed: { '@type': 'City', name: 'Houston, TX' },
       },
-    },
-    areaServed: { '@type': 'City', name: 'Houston, TX' },
+      ...(service.faqs && service.faqs.length > 0
+        ? [
+            {
+              '@type': 'FAQPage',
+              mainEntity: service.faqs.map((faq) => ({
+                '@type': 'Question',
+                name: faq.question,
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: faq.answer,
+                },
+              })),
+            },
+          ]
+        : []),
+    ],
   };
 
   useSeo({
@@ -80,6 +106,7 @@ export function ServicePage() {
             alt={service.heroAlt}
             className="h-full w-full object-cover opacity-20"
             loading="eager"
+            fetchPriority="high"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-navy-950 via-navy-900/95 to-navy-900/80" />
         </div>
@@ -114,10 +141,10 @@ export function ServicePage() {
       <section className="bg-white py-16 sm:py-20">
         <div className="container-page grid gap-12 lg:grid-cols-3">
           <div className="lg:col-span-2 space-y-12">
-            {/* About Section */}
+            {/* 1. Professional Service Overview */}
             <Reveal>
               <h2 className="font-display text-2xl font-bold text-navy-900 sm:text-3xl">
-                About {service.name} in Houston
+                Professional {service.name} Services in Houston
               </h2>
               <div className="mt-5 space-y-4">
                 {service.intro.map((p, i) => (
@@ -126,114 +153,52 @@ export function ServicePage() {
                   </p>
                 ))}
               </div>
-            </Reveal>
-
-            {/* What It Involves */}
-            <Reveal>
-              <h2 className="font-display text-2xl font-bold text-navy-900 sm:text-3xl">
-                What {service.name} Involves
-              </h2>
-              <div className="mt-5 space-y-4">
+              <div className="mt-6 space-y-4 border-l-2 border-electric-400 pl-5 text-sm text-charcoal-600">
                 {service.whatItIs.map((p, i) => (
-                  <p key={i} className="text-base leading-relaxed text-charcoal-700">
+                  <p key={i} className="leading-relaxed">
                     {p}
                   </p>
                 ))}
               </div>
             </Reveal>
 
-            {/* Warning Signs / When You Need This Service */}
+            {/* 2. Signs You May Need Service */}
             {service.warningSigns && service.warningSigns.length > 0 && (
-              <Reveal className="rounded-2xl border border-amber-200 bg-amber-50/60 p-6 sm:p-7">
-                <div className="flex items-center gap-2.5">
-                  <AlertTriangle className="h-5 w-5 text-amber-600" />
-                  <h3 className="font-display text-lg font-bold text-navy-950">
-                    Signs You Need {service.name}
-                  </h3>
-                </div>
-                <ul className="mt-4 grid gap-3 sm:grid-cols-2">
-                  {service.warningSigns.map((sign, i) => (
-                    <li key={i} className="flex items-start gap-2.5 text-sm text-charcoal-800">
-                      <span className="mt-1 h-2 w-2 shrink-0 rounded-full bg-amber-500" />
-                      <span>{sign}</span>
-                    </li>
-                  ))}
-                </ul>
-              </Reveal>
-            )}
-
-            {/* 4-Step Process Section */}
-            {service.processSteps && service.processSteps.length > 0 && (
               <Reveal>
-                <h2 className="font-display text-2xl font-bold text-navy-900 sm:text-3xl">
-                  Our Step-by-Step {service.shortName} Process
-                </h2>
-                <div className="mt-6 grid gap-4 sm:grid-cols-2">
-                  {service.processSteps.map((step, i) => (
-                    <div key={i} className="rounded-xl border border-charcoal-200 bg-charcoal-50 p-5">
-                      <span className="font-display text-2xl font-extrabold text-electric-500/40">
-                        0{i + 1}
-                      </span>
-                      <h4 className="mt-2 font-display text-base font-bold text-navy-900">{step.title}</h4>
-                      <p className="mt-1.5 text-xs leading-relaxed text-charcoal-600">{step.body}</p>
-                    </div>
-                  ))}
-                </div>
-              </Reveal>
-            )}
-
-            {/* Common Needs */}
-            <Reveal>
-              <h2 className="font-display text-2xl font-bold text-navy-900 sm:text-3xl">
-                Common {service.name} Needs
-              </h2>
-              <div className="mt-6 grid gap-5 sm:grid-cols-2">
-                {service.commonNeeds.map((need, i) => (
-                  <div key={i} className="rounded-xl border border-charcoal-200 bg-white p-5 shadow-sm">
-                    <h3 className="font-display text-base font-bold text-navy-900">{need.title}</h3>
-                    <p className="mt-2 text-sm leading-relaxed text-charcoal-600">{need.body}</p>
+                <div className="rounded-2xl border border-amber-200 bg-amber-50/70 p-6 sm:p-7">
+                  <div className="flex items-center gap-2.5">
+                    <AlertTriangle className="h-5 w-5 text-amber-600" />
+                    <h2 className="font-display text-xl font-bold text-navy-950">
+                      Signs You May Need {service.shortName}
+                    </h2>
                   </div>
-                ))}
-              </div>
-            </Reveal>
-
-            {/* Code Compliance Note Box */}
-            {service.necCodeNote && (
-              <Reveal className="rounded-2xl border border-navy-800 bg-navy-950 p-6 text-white sm:p-7">
-                <div className="flex items-center gap-2.5 text-electric-400">
-                  <ShieldCheck className="h-5 w-5" />
-                  <span className="font-display text-sm font-bold uppercase tracking-wider">
-                    Safety &amp; Code Standards
-                  </span>
+                  <p className="mt-2 text-sm text-charcoal-700">
+                    Common customer problems, symptoms, and electrical warnings indicating your home or business requires inspection:
+                  </p>
+                  <ul className="mt-4 grid gap-3 sm:grid-cols-2">
+                    {service.warningSigns.map((sign, i) => (
+                      <li key={i} className="flex items-start gap-2.5 text-sm text-charcoal-800">
+                        <span className="mt-1 h-2 w-2 shrink-0 rounded-full bg-amber-500" />
+                        <span>{sign}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <p className="mt-3 text-sm leading-relaxed text-charcoal-200">{service.necCodeNote}</p>
               </Reveal>
             )}
 
-            {/* Installation Considerations */}
+            {/* 3. What Our Electrical Service Includes */}
             <Reveal>
               <h2 className="font-display text-2xl font-bold text-navy-900 sm:text-3xl">
-                Key Considerations for Houston Property Owners
+                What Our {service.shortName} Service Includes
               </h2>
-              <ul className="mt-6 space-y-3">
-                {service.considerations.map((c, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-electric-400 text-navy-900">
-                      <Check className="h-3 w-3" strokeWidth={3} />
-                    </span>
-                    <span className="text-sm leading-relaxed text-charcoal-700">{c}</span>
-                  </li>
-                ))}
-              </ul>
-            </Reveal>
+              <p className="mt-2 text-sm text-charcoal-600">
+                The actual technical work, installations, and repairs S Branch Electric performs for Houston properties:
+              </p>
 
-            {/* Services Provided Scope Checklist */}
-            <Reveal>
-              <div className="rounded-2xl border border-navy-100 bg-navy-50/70 p-7">
-                <h2 className="font-display text-xl font-bold text-navy-900">
-                  Scope of {service.shortName} Provided
-                </h2>
-                <ul className="mt-5 grid gap-3 sm:grid-cols-2">
+              {/* Service checklist */}
+              <div className="mt-5 rounded-2xl border border-navy-100 bg-navy-50/60 p-6 sm:p-7">
+                <ul className="grid gap-3 sm:grid-cols-2">
                   {service.servicesProvided.map((s, i) => (
                     <li key={i} className="flex items-center gap-2.5 text-sm text-charcoal-800">
                       <Check className="h-4 w-4 shrink-0 text-electric-500" strokeWidth={2.5} />
@@ -242,39 +207,209 @@ export function ServicePage() {
                   ))}
                 </ul>
               </div>
+
+              {/* Common needs cards */}
+              <div className="mt-6 grid gap-4 sm:grid-cols-2">
+                {service.commonNeeds.map((need, i) => (
+                  <div key={i} className="rounded-xl border border-charcoal-200 bg-white p-5 shadow-sm">
+                    <h3 className="font-display text-base font-bold text-navy-900">{need.title}</h3>
+                    <p className="mt-1.5 text-xs leading-relaxed text-charcoal-600">{need.body}</p>
+                  </div>
+                ))}
+              </div>
             </Reveal>
 
-            {/* Related Real Customer Review */}
-            {service.relatedReview && (
-              <Reveal className="rounded-2xl border border-charcoal-200 bg-white p-7 shadow-sm">
-                <div className="flex items-center justify-between">
-                  <span className="eyebrow text-electric-600">Verified Client Feedback</span>
-                  <div className="flex items-center gap-0.5">
-                    {[0, 1, 2, 3, 4].map((s) => (
-                      <Star key={s} className="h-4 w-4 text-amber-400" fill="currentColor" />
-                    ))}
-                  </div>
-                </div>
-                <blockquote className="mt-4 text-sm leading-relaxed text-charcoal-700 italic">
-                  &ldquo;{service.relatedReview.quote}&rdquo;
-                </blockquote>
-                <div className="mt-4 border-t border-charcoal-100 pt-4 flex items-center justify-between text-xs">
-                  <span className="font-bold text-navy-900">{service.relatedReview.author}</span>
-                  <span className="text-charcoal-500">{service.relatedReview.meta}</span>
+            {/* 4. Our Electrical Service Process */}
+            {service.processSteps && service.processSteps.length > 0 && (
+              <Reveal>
+                <h2 className="font-display text-2xl font-bold text-navy-900 sm:text-3xl">
+                  Our Electrical Service Process
+                </h2>
+                <p className="mt-2 text-sm text-charcoal-600">
+                  Every project follows our thorough, transparent protocol from initial inspection to final municipal release:
+                </p>
+                <div className="mt-6 grid gap-4 sm:grid-cols-2">
+                  {service.processSteps.map((step, i) => (
+                    <div key={i} className="rounded-xl border border-charcoal-200 bg-charcoal-50 p-5">
+                      <span className="font-display text-2xl font-extrabold text-electric-500/40">
+                        0{i + 1}
+                      </span>
+                      <h3 className="mt-2 font-display text-base font-bold text-navy-900">{step.title}</h3>
+                      <p className="mt-1.5 text-xs leading-relaxed text-charcoal-600">{step.body}</p>
+                    </div>
+                  ))}
                 </div>
               </Reveal>
             )}
 
-            {/* FAQs Accordion */}
+            {/* 5. Real Project Case Study (when available) */}
+            {relevantCaseStudy && (
+              <Reveal>
+                <div className="rounded-2xl border border-navy-200 bg-navy-50/60 p-7 shadow-sm">
+                  <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-navy-900">
+                    <FileText className="h-4 w-4 text-electric-500" />
+                    <span>Real Houston Project Case Study</span>
+                  </div>
+                  <h3 className="mt-2 font-display text-xl font-bold text-navy-900">
+                    {relevantCaseStudy.title}
+                  </h3>
+                  <p className="mt-1 text-xs text-charcoal-500">
+                    Location: {relevantCaseStudy.neighborhood} · Client: {relevantCaseStudy.clientName}
+                  </p>
+
+                  <div className="mt-4 grid gap-4 sm:grid-cols-2 text-xs text-charcoal-700">
+                    <div className="rounded-xl bg-white p-4 border border-charcoal-200">
+                      <p className="font-bold text-navy-900">Problem Experienced:</p>
+                      <p className="mt-1 leading-relaxed text-charcoal-600">{relevantCaseStudy.problem}</p>
+                    </div>
+                    <div className="rounded-xl bg-white p-4 border border-charcoal-200">
+                      <p className="font-bold text-navy-900">Master Electrician Diagnosis:</p>
+                      <p className="mt-1 leading-relaxed text-charcoal-600">{relevantCaseStudy.diagnosis}</p>
+                    </div>
+                  </div>
+
+                  <div className="mt-4 rounded-xl bg-white p-4 border border-charcoal-200">
+                    <p className="text-xs font-bold text-navy-900">Work Performed:</p>
+                    <ul className="mt-2 space-y-1.5 text-xs text-charcoal-600">
+                      {relevantCaseStudy.workPerformed.map((item, wIdx) => (
+                        <li key={wIdx} className="flex items-start gap-2">
+                          <Check className="mt-0.5 h-3.5 w-3.5 shrink-0 text-electric-500" strokeWidth={3} />
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <blockquote className="mt-4 border-l-4 border-electric-400 pl-4 text-xs italic text-charcoal-700">
+                    &ldquo;{relevantCaseStudy.clientQuote}&rdquo;
+                  </blockquote>
+                </div>
+              </Reveal>
+            )}
+
+            {/* Code Compliance Note Box */}
+            {service.necCodeNote && (
+              <Reveal className="rounded-2xl border border-navy-800 bg-navy-950 p-6 text-white sm:p-7">
+                <div className="flex items-center gap-2.5 text-electric-400">
+                  <ShieldCheck className="h-5 w-5" />
+                  <span className="font-display text-sm font-bold uppercase tracking-wider">
+                    Safety &amp; National Electrical Code Standards
+                  </span>
+                </div>
+                <p className="mt-3 text-sm leading-relaxed text-charcoal-200">{service.necCodeNote}</p>
+              </Reveal>
+            )}
+
+            {/* 6. Why Choose S Branch Electric? */}
             <Reveal>
               <h2 className="font-display text-2xl font-bold text-navy-900 sm:text-3xl">
-                {service.name} FAQs
+                Why Choose S Branch Electric?
+              </h2>
+              <p className="mt-2 text-sm text-charcoal-600">
+                When you hire S Branch Electric, you work directly with Master Electrician Gustavo (&ldquo;Gus&rdquo;) Rivera:
+              </p>
+
+              <div className="mt-6 grid gap-4 sm:grid-cols-2">
+                <div className="rounded-xl border border-charcoal-200 bg-white p-5 shadow-sm">
+                  <div className="flex items-center gap-2 text-navy-900 font-bold text-sm">
+                    <Award className="h-5 w-5 text-electric-500" />
+                    <span>Texas Master Electrician</span>
+                  </div>
+                  <p className="mt-2 text-xs text-charcoal-600 leading-relaxed">
+                    15+ years of hands-on Houston electrical experience. Licensed, insured, and thoroughly versed in City of Houston and NEC codes.
+                  </p>
+                </div>
+
+                <div className="rounded-xl border border-charcoal-200 bg-white p-5 shadow-sm">
+                  <div className="flex items-center gap-2 text-navy-900 font-bold text-sm">
+                    <Phone className="h-5 w-5 text-electric-500" />
+                    <span>Direct Phone Communication</span>
+                  </div>
+                  <p className="mt-2 text-xs text-charcoal-600 leading-relaxed">
+                    No middlemen or automated call centers. You speak directly with Gus for transparent advice and immediate scheduling.
+                  </p>
+                </div>
+
+                <div className="rounded-xl border border-charcoal-200 bg-white p-5 shadow-sm">
+                  <div className="flex items-center gap-2 text-navy-900 font-bold text-sm">
+                    <Star className="h-5 w-5 text-amber-500" fill="currentColor" />
+                    <span>Verified 5.0 Google Rating</span>
+                  </div>
+                  <p className="mt-2 text-xs text-charcoal-600 leading-relaxed">
+                    17 verified 5-star Google reviews from real clients in Spring Branch, Memorial, Katy, and Greater Houston.
+                  </p>
+                </div>
+
+                <div className="rounded-xl border border-charcoal-200 bg-white p-5 shadow-sm">
+                  <div className="flex items-center gap-2 text-navy-900 font-bold text-sm">
+                    <MapPin className="h-5 w-5 text-electric-500" />
+                    <span>Local Spring Branch Base</span>
+                  </div>
+                  <p className="mt-2 text-xs text-charcoal-600 leading-relaxed">
+                    Centrally dispatched from 1837 Huge Oaks St in 77055 for fast arrival across I-10, Beltway 8, and Loop 610.
+                  </p>
+                </div>
+              </div>
+
+              {/* Related Real Customer Review Card */}
+              {service.relatedReview && (
+                <div className="mt-6 rounded-2xl border border-charcoal-200 bg-charcoal-50/70 p-6 shadow-sm">
+                  <div className="flex items-center justify-between">
+                    <span className="eyebrow text-electric-600">Verified Client Feedback</span>
+                    <div className="flex items-center gap-0.5">
+                      {[0, 1, 2, 3, 4].map((s) => (
+                        <Star key={s} className="h-4 w-4 text-amber-400" fill="currentColor" />
+                      ))}
+                    </div>
+                  </div>
+                  <blockquote className="mt-3 text-sm leading-relaxed text-charcoal-700 italic">
+                    &ldquo;{service.relatedReview.quote}&rdquo;
+                  </blockquote>
+                  <div className="mt-3 border-t border-charcoal-200 pt-3 flex items-center justify-between text-xs">
+                    <span className="font-bold text-navy-900">{service.relatedReview.author}</span>
+                    <span className="text-charcoal-500">{service.relatedReview.meta}</span>
+                  </div>
+                </div>
+              )}
+            </Reveal>
+
+            {/* 7. Areas We Serve */}
+            <Reveal>
+              <h2 className="font-display text-2xl font-bold text-navy-900 sm:text-3xl">
+                Areas We Serve in Greater Houston
+              </h2>
+              <p className="mt-2 text-sm text-charcoal-600">
+                S Branch Electric provides {service.shortName.toLowerCase()} across these confirmed service locations:
+              </p>
+              <div className="mt-5 grid gap-3 sm:grid-cols-2">
+                {serviceAreas.map((area) => (
+                  <Link
+                    key={area.path}
+                    to={area.path}
+                    className="group flex items-center justify-between rounded-xl border border-charcoal-200 bg-white p-4 transition-all hover:border-electric-400 hover:shadow-sm"
+                  >
+                    <div>
+                      <p className="text-sm font-bold text-navy-900 group-hover:text-electric-600">
+                        {area.shortName}, TX
+                      </p>
+                      <p className="text-xs text-charcoal-500">{area.responseTime}</p>
+                    </div>
+                    <ArrowRight className="h-4 w-4 text-charcoal-400 transition-transform group-hover:translate-x-1 group-hover:text-electric-500" />
+                  </Link>
+                ))}
+              </div>
+            </Reveal>
+
+            {/* 8. Frequently Asked Questions */}
+            <Reveal>
+              <h2 className="font-display text-2xl font-bold text-navy-900 sm:text-3xl">
+                Frequently Asked Questions About {service.shortName}
               </h2>
               <div className="mt-6 space-y-4">
                 {service.faqs.map((faq, i) => (
                   <details
                     key={i}
-                    className="group rounded-xl border border-charcoal-200 bg-white p-5 open:bg-charcoal-50 transition-colors"
+                    className="group rounded-xl border border-charcoal-200 bg-white p-5 shadow-sm open:bg-charcoal-50 transition-colors"
                   >
                     <summary className="flex cursor-pointer items-center justify-between gap-4 font-display text-base font-semibold text-navy-900 list-none">
                       <span className="flex items-start gap-2.5">
@@ -362,8 +497,8 @@ export function ServicePage() {
 
       {/* Final Call CTA Section */}
       <CtaSection
-        title={`Need ${service.name} in Houston?`}
-        subtitle={`Call S Branch Electric at ${BUSINESS.phone} to discuss your project, get honest pricing, and confirm availability.`}
+        title={`Schedule Your ${service.name} in Houston`}
+        subtitle={`Call Gustavo at S Branch Electric at ${BUSINESS.phone} to discuss your project, get honest pricing, and confirm prompt service availability.`}
         label={`Call ${BUSINESS.phone}`}
       />
     </>

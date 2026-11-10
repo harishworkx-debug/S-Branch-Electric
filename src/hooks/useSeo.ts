@@ -12,7 +12,8 @@ const BASE_URL = 'https://www.springbranchelectric.co';
 
 export function useSeo({ title, description, path, schema, ogImage }: SeoOptions) {
   useEffect(() => {
-    const canonical = `${BASE_URL}${path}`;
+    const cleanPath = path.startsWith('/') ? path : `/${path}`;
+    const canonical = cleanPath === '/' ? `${BASE_URL}/` : `${BASE_URL}${cleanPath}`;
     document.title = title;
 
     setMeta('name', 'description', description);

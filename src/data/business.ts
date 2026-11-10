@@ -9,7 +9,12 @@ export const BUSINESS = {
   state: 'TX',
   zip: '77055',
   country: 'United States',
+  neighborhood: 'Spring Branch (Northwest Houston)',
+  primaryMarket: 'Spring Branch, Houston, TX 77055',
+  owner: 'Gustavo Rivera (Gus)',
   mainLocation: 'Houston, TX',
+  disambiguationNote:
+    'S Branch Electric is an independent local electrical service based at 1837 Huge Oaks St in the Spring Branch community of Northwest Houston, TX (77055). Not affiliated with Spring Branch Electric Company located in Comal County / Hill Country.',
   mapsLink: 'https://maps.app.goo.gl/VcLmK2MMB2sjkp3u5',
   mapEmbed:
     'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3462.0619457240064!2d-95.4914108!3d29.8047547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640c564ab270165%3A0xc3eac1525a1a9a37!2sS%20Branch%20Electric!5e0!3m2!1sen!2sin!4v1794106380609!5m2!1sen!2sin',

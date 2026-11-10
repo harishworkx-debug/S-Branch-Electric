@@ -38,12 +38,122 @@ import { CtaSection } from '@/components/CtaSection';
 import { Reveal } from '@/components/Reveal';
 import { GoogleReviewsWidget } from '@/components/GoogleReviewsWidget';
 
+const homeFaqs = [
+  {
+    question: 'How do I contact S Branch Electric for a quote or service call?',
+    answer:
+      'Call 832-484-0514. S Branch Electric uses direct phone calls as the fastest, most effective contact method. You will speak directly with Gus to discuss your electrical project, timeline, and pricing.',
+  },
+  {
+    question: 'Why does my circuit breaker keep tripping?',
+    answer:
+      'A breaker trips to prevent electrical fires from circuit overloads or short circuits. Frequent tripping usually means high-wattage appliances (like an air fryer and microwave) are on the same circuit, or the breaker has weakened. Call Gus to diagnose and safely balance the load.',
+  },
+  {
+    question: 'What causes lights to flicker in a house?',
+    answer:
+      'Lights flicker due to sudden voltage drops when large appliances (like AC compressors or dryers) kick on, loose neutral wiring in the main panel, or utility service entrance issues. Persistent flickering is a safety hazard that requires professional troubleshooting.',
+  },
+  {
+    question: 'When should a homeowner upgrade an electrical panel?',
+    answer:
+      'You should upgrade to a 200-amp panel if your home still has a 100-amp panel, if your breakers trip frequently when running multiple appliances, or if you are adding an EV charger, hot tub, sauna, or modern HVAC equipment.',
+  },
+  {
+    question: 'Do I need a whole-house surge protector?',
+    answer:
+      'Yes. A Type 2 whole-house surge protector installed inside your breaker panel protects sensitive electronics, AC compressors, and smart appliances from Houston grid voltage spikes and nearby lightning strikes.',
+  },
+  {
+    question: 'What is the difference between a generator interlock and a transfer switch?',
+    answer:
+      'A generator interlock kit installs directly on your panel faceplate and mechanically locks out the main utility breaker when the generator breaker is on. It costs significantly less than a separate transfer switch and lets you power any circuit in your home up to your generator’s wattage capacity.',
+  },
+  {
+    question: 'Why are my electrical outlets not working?',
+    answer:
+      'Dead outlets are usually caused by a tripped GFCI outlet upstream (often located in a nearby bathroom or garage), a loose connection behind the receptacle, or a tripped circuit breaker. S Branch Electric can trace and repair the circuit promptly.',
+  },
+  {
+    question: 'Does S Branch Electric serve my neighborhood in Houston?',
+    answer:
+      'We are based in Spring Branch (77055) and actively serve Spring Branch, Memorial, Bellaire, Katy, Cypress, Spring, the Energy Corridor, and neighboring Houston communities. Call 832-484-0514 to confirm same-day or scheduled availability.',
+  },
+];
+
 export function HomePage() {
+  const homeSchema = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'Electrician',
+        '@id': 'https://www.springbranchelectric.co/#business',
+        name: 'S Branch Electric',
+        description:
+          'Electrical troubleshooting, wiring, panel upgrades and electrical installations serving Spring Branch and Greater Houston, TX.',
+        image: 'https://images.pexels.com/photos/27928762/pexels-photo-27928762.jpeg',
+        telephone: '+18324840514',
+        url: 'https://www.springbranchelectric.co/',
+        priceRange: '$$',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '1837 Huge Oaks St',
+          addressLocality: 'Houston',
+          addressRegion: 'TX',
+          postalCode: '77055',
+          addressCountry: 'US',
+        },
+        geo: {
+          '@type': 'GeoCoordinates',
+          latitude: 29.8047547,
+          longitude: -95.4914108,
+        },
+        openingHoursSpecification: {
+          '@type': 'OpeningHoursSpecification',
+          dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+          opens: '00:00',
+          closes: '23:59',
+        },
+        hasMap: 'https://maps.app.goo.gl/VcLmK2MMB2sjkp3u5',
+        areaServed: [
+          { '@type': 'AdministrativeArea', name: 'Spring Branch, Houston, TX' },
+          { '@type': 'AdministrativeArea', name: 'Memorial, Houston, TX' },
+          { '@type': 'City', name: 'Houston, TX' },
+          { '@type': 'City', name: 'Bellaire, TX' },
+          { '@type': 'City', name: 'Katy, TX' },
+          { '@type': 'City', name: 'Cypress, TX' },
+          { '@type': 'City', name: 'Spring, TX' },
+        ],
+      },
+      {
+        '@type': 'WebSite',
+        '@id': 'https://www.springbranchelectric.co/#website',
+        url: 'https://www.springbranchelectric.co/',
+        name: 'S Branch Electric',
+        publisher: {
+          '@id': 'https://www.springbranchelectric.co/#business',
+        },
+      },
+      {
+        '@type': 'FAQPage',
+        mainEntity: homeFaqs.map((faq) => ({
+          '@type': 'Question',
+          name: faq.question,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: faq.answer,
+          },
+        })),
+      },
+    ],
+  };
+
   useSeo({
-    title: 'S Branch Electric | Electrical Installation Service in Houston, TX',
+    title: 'Electrician in Spring Branch, Houston, TX | S Branch Electric',
     description:
-      'S Branch Electric is a trusted electrical installation and repair service in Houston, TX. Call 832-484-0514 for panel upgrades, wiring, lighting, EV circuits, and repairs.',
+      'Need a reliable electrician in Spring Branch, Houston? S Branch Electric provides electrical troubleshooting, wiring, panel upgrades and electrical installations. Contact us to schedule service.',
     path: '/',
+    schema: homeSchema,
   });
 
   return (
@@ -62,8 +172,8 @@ export function HomePage() {
       <AreasPreview />
       <HomeFaqSection />
       <CtaSection
-        title="Need Electrical Installation or Repair in Houston?"
-        subtitle="Call Gustavo at S Branch Electric to discuss your electrical project, get transparent pricing, and confirm service availability."
+        title="Need an Electrician in Spring Branch or Greater Houston?"
+        subtitle="Call Gustavo at S Branch Electric (1837 Huge Oaks St) to discuss your electrical project, get transparent pricing, and confirm prompt service availability."
         label={`Call ${BUSINESS.phone}`}
       />
     </>
@@ -79,6 +189,7 @@ function Hero() {
           alt="Professional electrician working on circuit breaker panel in Houston home"
           className="h-full w-full object-cover opacity-20"
           loading="eager"
+          fetchPriority="high"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-navy-950 via-navy-900/95 to-navy-900/80" />
         <div
@@ -95,20 +206,17 @@ function Hero() {
           {/* Urgent / Availability Alert Pill */}
           <div className="inline-flex flex-wrap items-center gap-2 rounded-full border border-electric-400/40 bg-electric-400/10 px-4 py-1.5 text-xs font-semibold text-electric-300 backdrop-blur-sm">
             <span className="flex h-2 w-2 rounded-full bg-electric-400 animate-pulse" />
-            <span>Spring Branch & Greater Houston Local Electrician</span>
+            <span>Local Spring Branch Electrician · 1837 Huge Oaks St, Houston 77055</span>
             <span className="hidden sm:inline text-white/40">•</span>
-            <span className="hidden sm:inline text-charcoal-200">Direct Phone Calls — No Call Centers</span>
+            <span className="hidden sm:inline text-charcoal-200">Direct Phone Calls With Gus</span>
           </div>
 
           <h1 className="mt-6 font-display text-4xl font-extrabold leading-[1.12] text-white sm:text-5xl lg:text-6xl">
-            Trusted Electrical Installation & Repairs in{' '}
-            <span className="text-electric-400">Houston, TX</span>
+            Trusted Electrician Serving <span className="text-electric-400">Spring Branch</span> and Houston, TX
           </h1>
 
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-charcoal-200">
-            From breaker panel upgrades and whole-home rewiring to dedicated appliance circuits and troubleshooting,
-            <strong> S Branch Electric</strong> delivers safe, code-compliant electrical work across Houston.
-            Speak directly with experienced electrician <strong>Gustavo (Gus)</strong> on every job.
+            Based right here on Huge Oaks St in the heart of Spring Branch (77055), <strong>S Branch Electric</strong> delivers safe, code-compliant breaker repairs, 200A panel upgrades, and electrical installations across Northwest Houston. Speak directly with licensed master electrician <strong>Gustavo (Gus) Rivera</strong> on every job.
           </p>
 
           <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
@@ -794,48 +902,7 @@ function AreasPreview() {
 }
 
 function HomeFaqSection() {
-  const faqs = [
-    {
-      question: 'How do I contact S Branch Electric for a quote or service call?',
-      answer:
-        'Call 832-484-0514. S Branch Electric uses direct phone calls as the fastest, most effective contact method. You will speak directly with Gus to discuss your electrical project, timeline, and pricing.',
-    },
-    {
-      question: 'Does S Branch Electric serve my neighborhood in Houston?',
-      answer:
-        'We are based in Spring Branch (77055) and actively serve Spring Branch, Memorial, Bellaire, Katy, Cypress, Spring, the Energy Corridor, and neighboring Houston communities. Call to confirm availability for your address.',
-    },
-    {
-      question: 'Do you handle both residential and commercial electrical work?',
-      answer:
-        'Yes! S Branch Electric provides full electrical services for homeowners, rental properties, retail storefronts, offices, and light commercial spaces across Houston.',
-    },
-    {
-      question: 'Can you help with emergency electrical issues or weekend calls?',
-      answer:
-        'Yes. Gustavo frequently assists Houston homeowners with weekend and urgent electrical problems, including blown fuses, dead appliance circuits, and sparking panels. Call 832-484-0514 immediately if you have an urgent situation.',
-    },
-    {
-      question: 'When should I upgrade my electrical panel to 200 amps?',
-      answer:
-        'You should consider a 200-amp upgrade if your home still has a 100-amp panel, if your breakers trip frequently when high-wattage appliances run simultaneously, or if you are installing an EV charger, tankless water heater, hot tub, or new HVAC system.',
-    },
-    {
-      question: 'Why do my kitchen or bathroom outlets keep tripping?',
-      answer:
-        'Kitchen and bathroom circuits are protected by GFCI (Ground Fault Circuit Interrupter) outlets. Tripping usually indicates an overloaded circuit (e.g. running an air fryer and toaster together) or moisture/ground faults in the wiring. We can test the circuit and install a dedicated line if needed.',
-    },
-    {
-      question: 'Do you install whole-house surge protectors?',
-      answer:
-        'Yes! Whole-house surge protection installed directly inside your breaker panel protects all connected appliances, computers, and electronics from Houston grid surges and lightning strikes.',
-    },
-    {
-      question: 'Do electrical installations in Houston require permits?',
-      answer:
-        'Major electrical installations, such as main panel upgrades and new circuit additions, often require City of Houston permits and inspections. We ensure all work complies with the National Electrical Code (NEC) and city standards.',
-    },
-  ];
+  const faqs = homeFaqs;
 
   return (
     <section className="bg-white py-20 sm:py-24">

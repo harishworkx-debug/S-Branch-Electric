@@ -14,6 +14,7 @@ import {
   Clock,
   CheckCircle2,
   Wrench,
+  Navigation,
 } from 'lucide-react';
 import { useSeo } from '@/hooks/useSeo';
 import { BUSINESS } from '@/data/business';
@@ -166,6 +167,36 @@ export function ServiceAreaPage() {
               </div>
             </Reveal>
 
+            {/* Travel & Service Logistics */}
+            {area.travelLogistics && (
+              <Reveal className="rounded-2xl border border-electric-300 bg-electric-50/40 p-6 sm:p-7">
+                <div className="flex items-center gap-2.5">
+                  <Navigation className="h-5 w-5 text-electric-600" />
+                  <h3 className="font-display text-lg font-bold text-navy-900">
+                    Travel &amp; Service Logistics for {area.shortName}
+                  </h3>
+                </div>
+                <div className="mt-5 grid gap-4 sm:grid-cols-2 text-sm">
+                  <div className="rounded-xl border border-charcoal-200 bg-white p-4 shadow-sm">
+                    <span className="text-xs font-bold uppercase tracking-wider text-charcoal-400">Dispatch Location</span>
+                    <p className="mt-1 font-semibold text-navy-900">{area.travelLogistics.dispatchOrigin}</p>
+                  </div>
+                  <div className="rounded-xl border border-charcoal-200 bg-white p-4 shadow-sm">
+                    <span className="text-xs font-bold uppercase tracking-wider text-charcoal-400">Average Response Time</span>
+                    <p className="mt-1 font-semibold text-navy-900">{area.travelLogistics.typicalResponseTime}</p>
+                  </div>
+                  <div className="rounded-xl border border-charcoal-200 bg-white p-4 shadow-sm">
+                    <span className="text-xs font-bold uppercase tracking-wider text-charcoal-400">Primary Highway Route</span>
+                    <p className="mt-1 font-semibold text-navy-900">{area.travelLogistics.routeDetails}</p>
+                  </div>
+                  <div className="rounded-xl border border-charcoal-200 bg-white p-4 shadow-sm">
+                    <span className="text-xs font-bold uppercase tracking-wider text-charcoal-400">Booking &amp; Availability</span>
+                    <p className="mt-1 font-semibold text-navy-900">{area.travelLogistics.serviceAvailability}</p>
+                  </div>
+                </div>
+              </Reveal>
+            )}
+
             {/* Housing & Electrical Profile Matrix */}
             <Reveal>
               <h2 className="font-display text-2xl font-bold text-navy-900 sm:text-3xl">
@@ -247,6 +278,47 @@ export function ServiceAreaPage() {
                 ))}
               </div>
             </Reveal>
+
+            {/* Real Completed Jobs in this Area */}
+            {area.realCompletedJobs && area.realCompletedJobs.length > 0 && (
+              <Reveal>
+                <div className="flex items-center gap-2.5">
+                  <Wrench className="h-5 w-5 text-electric-600" />
+                  <h2 className="font-display text-2xl font-bold text-navy-900 sm:text-3xl">
+                    Real Completed Electrical Jobs in {area.shortName}
+                  </h2>
+                </div>
+                <p className="mt-2 text-sm text-charcoal-600">
+                  Verified electrical repair and installation projects completed by master electrician Gustavo Rivera in {area.shortName}:
+                </p>
+                <div className="mt-6 space-y-4">
+                  {area.realCompletedJobs.map((job, idx) => (
+                    <div key={idx} className="rounded-xl border border-charcoal-200 bg-white p-5 shadow-sm">
+                      <div className="flex flex-wrap items-center justify-between gap-2 border-b border-charcoal-100 pb-3">
+                        <h4 className="font-display text-base font-bold text-navy-900">{job.title}</h4>
+                        <span className="rounded-md bg-navy-50 px-2.5 py-1 text-xs font-semibold text-navy-800 border border-navy-100">
+                          {job.neighborhood}
+                        </span>
+                      </div>
+                      <div className="mt-3 grid gap-3 text-sm sm:grid-cols-2">
+                        <div className="rounded-lg bg-charcoal-50 p-3">
+                          <strong className="text-xs font-bold uppercase tracking-wider text-charcoal-500 block mb-1">
+                            Project Scope:
+                          </strong>
+                          <p className="text-charcoal-700 leading-relaxed">{job.scope}</p>
+                        </div>
+                        <div className="rounded-lg bg-emerald-50/60 p-3 border border-emerald-100">
+                          <strong className="text-xs font-bold uppercase tracking-wider text-emerald-700 block mb-1">
+                            Verified Outcome:
+                          </strong>
+                          <p className="text-charcoal-800 leading-relaxed">{job.outcome}</p>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </Reveal>
+            )}
 
             {/* Local Client Review (if available) */}
             {area.localReview && (

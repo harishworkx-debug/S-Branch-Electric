@@ -139,6 +139,9 @@ export function Header() {
             <NavLink to="/reviews" className={navLinkClass}>
               Reviews
             </NavLink>
+            <NavLink to="/blog" className={navLinkClass}>
+              Guides &amp; Blog
+            </NavLink>
             <NavLink to="/contact" className={navLinkClass}>
               Contact
             </NavLink>
@@ -189,6 +192,7 @@ export function Header() {
               />
               <MobileLink to="/about" label="About" />
               <MobileLink to="/reviews" label="Reviews" />
+              <MobileLink to="/blog" label="Guides & Blog" />
               <MobileLink to="/contact" label="Contact" />
               <div className="mt-4 px-2">
                 <CallButton size="lg" className="w-full" />

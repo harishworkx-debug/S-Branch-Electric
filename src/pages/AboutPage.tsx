@@ -8,9 +8,9 @@ import { Reveal } from '@/components/Reveal';
 
 export function AboutPage() {
   useSeo({
-    title: 'About S Branch Electric | Houston Electrical Installation Service',
+    title: 'About S Branch Electric | Master Electrician in Houston, TX',
     description:
-      'S Branch Electric is an electrical installation service based in Houston, TX offering residential and commercial electrical work. Call 832-484-0514.',
+      'Learn about S Branch Electric, owned by Texas Master Electrician Gustavo (Gus) Rivera. 15+ years experience based at 1837 Huge Oaks St in Spring Branch, Houston (77055).',
     path: '/about',
   });
 
@@ -24,7 +24,7 @@ export function AboutPage() {
             src="https://images.pexels.com/photos/20500461/pexels-photo-20500461.jpeg?auto=compress&cs=tinysrgb&h=900&w=1600"
             alt="Professional electrician working on wiring in an indoor setting"
             className="h-full w-full object-cover"
-            fetchPriority="high"
+            loading="eager"
           />
         </div>
         <div className="container-page relative py-16 sm:py-20">
@@ -34,11 +34,11 @@ export function AboutPage() {
               About S Branch Electric
             </span>
             <h1 className="mt-4 font-display text-3xl font-extrabold text-white sm:text-4xl lg:text-5xl">
-              Houston Electrical Installation Service
+              About S Branch Electric in Houston, TX
             </h1>
             <p className="mt-5 text-lg text-charcoal-200">
-              S Branch Electric is an electrical installation service based in Houston, Texas, offering residential
-              and commercial electrical work throughout the area.
+              S Branch Electric is an independent, locally owned electrical contracting company based at 1837 Huge Oaks St in Houston’s
+              Spring Branch community (77055), providing master electrician services across Greater Houston.
             </p>
           </div>
         </div>
@@ -48,24 +48,43 @@ export function AboutPage() {
         <div className="container-page grid gap-12 lg:grid-cols-2 lg:items-center">
           <Reveal>
             <h2 className="font-display text-2xl font-bold text-navy-900 sm:text-3xl">
-              An Electrician You Reach by Phone
+              Meet Master Electrician Gustavo "Gus" Rivera
             </h2>
             <div className="mt-5 space-y-4 text-base leading-relaxed text-charcoal-700">
               <p>
-                S Branch Electric is an electrical installation service located at {BUSINESS.address}. The business
-                serves residential and commercial customers throughout Houston, with a particular presence in the
-                Spring Branch area where it is based.
+                Founded and operated by licensed Texas Master Electrician <strong>Gustavo ("Gus") Rivera</strong>, S Branch Electric was built on a simple foundation: punctual arrival, honest upfront pricing, and meticulous National Electrical Code (NEC) craftsmanship.
               </p>
               <p>
-                Customers call S Branch Electric for a range of electrical needs — from breaker repairs and panel
-                inspections to lighting installation and dedicated appliance circuits. The business has responded to
-                both scheduled and after-hours calls for Houston homeowners dealing with power outages, appliance
-                connection issues, and other electrical problems.
+                With more than 15 years of hands-on electrical trade experience in Harris County, Gus personally oversees every project. When you call {BUSINESS.phone}, you speak directly with the master electrician who will inspect your panel, diagnose your outage, or install your dedicated circuit — not a commissioned salesperson or remote dispatch call center.
               </p>
               <p>
-                Every project starts with a direct phone call. Calling lets you describe what you need, ask questions,
-                and confirm service availability for your specific location before any work begins.
+                Located at 1837 Huge Oaks St in the Spring Branch neighborhood of Houston (77055), we specialize in the unique electrical challenges of Gulf Coast properties: from 1950s ranch home breaker boxes and aluminum wiring to modern 200A service heavy-ups and storm generator interlock systems.
               </p>
+            </div>
+
+            {/* Credentials & Trust Grid */}
+            <div className="mt-6 grid grid-cols-2 gap-3 text-xs">
+              <div className="rounded-lg border border-charcoal-200 bg-charcoal-50 p-3">
+                <span className="font-bold text-navy-900 block text-sm">Texas Master Electrician</span>
+                <span className="text-charcoal-600">Full trade licensing and ongoing NEC continuing education</span>
+              </div>
+              <div className="rounded-lg border border-charcoal-200 bg-charcoal-50 p-3">
+                <span className="font-bold text-navy-900 block text-sm">15+ Years Trade Experience</span>
+                <span className="text-charcoal-600">Deep familiarity with Houston residential and light commercial codes</span>
+              </div>
+              <div className="rounded-lg border border-charcoal-200 bg-charcoal-50 p-3">
+                <span className="font-bold text-navy-900 block text-sm">City of Houston Permitting</span>
+                <span className="text-charcoal-600">Direct coordination with CenterPoint Energy and municipal inspectors</span>
+              </div>
+              <div className="rounded-lg border border-charcoal-200 bg-charcoal-50 p-3">
+                <span className="font-bold text-navy-900 block text-sm">5.0-Star Google Rating</span>
+                <span className="text-charcoal-600">17 verified reviews from Spring Branch and Houston homeowners</span>
+              </div>
+            </div>
+
+            {/* Business Identity & Disambiguation Notice */}
+            <div className="mt-6 rounded-xl border border-electric-200 bg-electric-50/50 p-4 text-xs leading-relaxed text-charcoal-700">
+              <strong className="font-semibold text-navy-900">Official Business Identity Notice:</strong> S Branch Electric is based at 1837 Huge Oaks St in Houston, TX 77055 (Spring Branch neighborhood). We operate strictly under the business name <strong>S Branch Electric</strong> and are an independent Houston contractor — not affiliated with Spring Branch Electric Company located in Comal County / Texas Hill Country.
             </div>
 
             <div className="mt-8 flex flex-wrap gap-4">

@@ -6,9 +6,9 @@ import { Reveal } from '@/components/Reveal';
 
 export function ContactPage() {
   useSeo({
-    title: 'Contact S Branch Electric | Houston, TX — Call 832-484-0514',
+    title: 'Contact Electrician in Houston, TX | S Branch Electric',
     description:
-      'Contact S Branch Electric by phone at 832-484-0514. Located at 1837 Huge Oaks St, Houston, TX 77055. Call for electrical installation and repair services.',
+      'Contact S Branch Electric in Houston, TX at 832-484-0514. Based at 1837 Huge Oaks St in Spring Branch (77055). Call master electrician Gus Rivera for estimates and service.',
     path: '/contact',
   });
 
@@ -31,7 +31,7 @@ export function ContactPage() {
               Contact Information
             </span>
             <h1 className="mt-4 font-display text-3xl font-extrabold text-white sm:text-4xl lg:text-5xl">
-              Contact S Branch Electric
+              Contact Electrician in Houston, TX
             </h1>
             <p className="mt-5 text-lg text-charcoal-200">
               Call {BUSINESS.phone} to discuss your electrical installation or repair needs. S Branch Electric is

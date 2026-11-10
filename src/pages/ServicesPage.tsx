@@ -12,8 +12,27 @@ export function ServicesPage() {
   useSeo({
     title: 'Electrical Services in Houston, TX | S Branch Electric',
     description:
-      'Explore electrical services offered by S Branch Electric in Houston, TX: installation, wiring, panel upgrades, lighting, breakers, outlets, and repairs. Call 832-484-0514.',
+      'Explore the full range of electrical services offered by S Branch Electric in Houston, TX: troubleshooting, 200A panel upgrades, rewiring, lighting, and installations.',
     path: '/services',
+  });
+
+  const priorityOrder = [
+    'electrical-troubleshooting',
+    'electrical-panel-upgrades',
+    'electrical-wiring',
+    'circuit-breaker-installation',
+    'outlet-installation',
+    'lighting-installation',
+    'electrical-panel-installation',
+    'residential-electrical-installation',
+    'electrical-installation',
+    'commercial-electrical-installation',
+  ];
+
+  const sortedServices = [...services].sort((a, b) => {
+    const indexA = priorityOrder.indexOf(a.slug);
+    const indexB = priorityOrder.indexOf(b.slug);
+    return (indexA === -1 ? 99 : indexA) - (indexB === -1 ? 99 : indexB);
   });
 
   return (
@@ -24,15 +43,13 @@ export function ServicesPage() {
           <Reveal className="mx-auto max-w-2xl text-center">
             <span className="eyebrow">
               <Zap className="h-3.5 w-3.5" fill="currentColor" />
-              Electrical Services
+              Service Directory
             </span>
             <h1 className="mt-4 font-display text-4xl font-extrabold text-navy-900 sm:text-5xl">
               Electrical Services in Houston, TX
             </h1>
             <p className="mt-5 text-lg text-charcoal-600">
-              S Branch Electric offers residential and commercial electrical installation, panel work, wiring,
-              lighting, breaker, outlet, and troubleshooting services throughout Houston, Texas. Call to confirm
-              availability for your project.
+              Explore our complete directory of residential and commercial electrical services across Houston, TX. Master electrician Gustavo Rivera handles projects with transparent pricing and strict National Electrical Code compliance.
             </p>
             <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <a
@@ -46,8 +63,8 @@ export function ServicesPage() {
           </Reveal>
 
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {services.map((service, i) => (
-              <Reveal key={service.path} delay={i * 50}>
+            {sortedServices.map((service, i) => (
+              <Reveal key={service.path} delay={i * 40}>
                 <ServiceCard service={service} />
               </Reveal>
             ))}

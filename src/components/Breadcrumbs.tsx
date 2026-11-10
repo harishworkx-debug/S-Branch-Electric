@@ -7,8 +7,31 @@ interface Crumb {
 }
 
 export function Breadcrumbs({ items }: { items: Crumb[] }) {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://www.springbranchelectric.co/',
+      },
+      ...items.map((item, idx) => ({
+        '@type': 'ListItem',
+        position: idx + 2,
+        name: item.label,
+        ...(item.to ? { item: `https://www.springbranchelectric.co${item.to}` } : {}),
+      })),
+    ],
+  };
+
   return (
     <nav aria-label="Breadcrumb" className="container-page pt-6">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
       <ol className="flex flex-wrap items-center gap-1.5 text-sm text-charcoal-500">
         <li>
           <Link to="/" className="inline-flex items-center gap-1 transition-colors hover:text-navy-700">

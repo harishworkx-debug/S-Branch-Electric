@@ -13,12 +13,27 @@ export interface HousingProfile {
 export interface PopularServiceItem {
   name: string;
   reason: string;
+  body?: string;
 }
 
 export interface ServiceAreaReview {
   author: string;
   meta: string;
   quote: string;
+}
+
+export interface TravelLogistics {
+  dispatchOrigin: string;
+  typicalResponseTime: string;
+  routeDetails: string;
+  serviceAvailability: string;
+}
+
+export interface CompletedJob {
+  title: string;
+  neighborhood: string;
+  scope: string;
+  outcome: string;
 }
 
 export interface ServiceAreaPage {
@@ -34,6 +49,8 @@ export interface ServiceAreaPage {
   zipCodes: string[];
   neighborhoods: string[];
   intro: string[];
+  travelLogistics: TravelLogistics;
+  realCompletedJobs: CompletedJob[];
   localContext: LocalContextItem[];
   housingElectricalProfile: HousingProfile;
   popularServices: PopularServiceItem[];
@@ -66,9 +83,35 @@ export const serviceAreas: ServiceAreaPage[] = [
       'Spring Valley Village area',
     ],
     intro: [
-      'S Branch Electric is based right here at 1837 Huge Oaks St in the heart of Spring Branch. When you call us, you are speaking directly to Gustavo ("Gus"), your neighborhood master electrician who knows the unique wiring challenges of Spring Branch homes inside and out.',
+      'S Branch Electric is based right here at 1837 Huge Oaks St in the historic Spring Branch neighborhood of Northwest Houston (77055). When you call us, you are speaking directly to Gustavo ("Gus"), your neighborhood master electrician who knows the unique wiring challenges of Spring Branch homes inside and out. Note: Spring Branch is our beloved Northwest Houston community within Harris County—not to be confused with the separate municipality of Spring Branch, TX located in Comal County / Texas Hill Country.',
       'Spring Branch has a rich architectural heritage dominated by 1950s through 1970s mid-century ranch homes and bungalows. While these homes have wonderful character, their original electrical systems were built for a time before microwaves, EV chargers, computers, and multi-ton AC units.',
       'From replacing hazardous Federal Pacific and Zinsco breaker boxes to remediating aluminum branch wiring and adding dedicated kitchen circuits, we provide honest, punctual, code-compliant service across our home community.',
+    ],
+    travelLogistics: {
+      dispatchOrigin: 'Dispatched directly from our headquarters at 1837 Huge Oaks St, Houston, TX 77055.',
+      typicalResponseTime: '10 to 25 minutes across Spring Branch East, West, Central, and Spring Valley.',
+      routeDetails: 'Immediate local arterial access along Long Point Rd, Bingle Rd, Campbell Rd, and Gessner Rd.',
+      serviceAvailability: 'Priority local scheduling, same-day service calls, and urgent weekend outage response.',
+    },
+    realCompletedJobs: [
+      {
+        title: 'Kitchen Breaker Tripping & Load Assessment',
+        neighborhood: 'Spring Branch West (Binglewood area)',
+        scope: 'Diagnosed 1,700W air fryer blowing 15A kitchen circuit; inspected breaker box and calculated appliance ampacity.',
+        outcome: 'Installed dedicated 20-amp kitchen circuit and added whole-house surge protector to prevent future outages (Reviewed by Aaron S).',
+      },
+      {
+        title: 'Costco Electric Dryer Grounding & Surge Protection',
+        neighborhood: 'Spring Branch Central (Campbell Woods)',
+        scope: 'Corrected improperly installed electric clothes dryer lacking equipment grounding; tested 240V NEMA receptacle.',
+        outcome: 'Completed same-day grounding remediation and installed panel-level surge suppression before weekend storms (Reviewed by Ava Camara).',
+      },
+      {
+        title: 'Laundry Room Washing Machine Breaker Replacement',
+        neighborhood: 'Spring Branch East (near Huge Oaks St)',
+        scope: 'Replaced faulty, tripping branch breaker cutting power to washing machine.',
+        outcome: 'Restored full laundry circuit power same-day at an affordable price (Reviewed by DeMarcus Sparks).',
+      },
     ],
     localContext: [
       {
@@ -167,6 +210,26 @@ export const serviceAreas: ServiceAreaPage[] = [
       'Memorial homes carry substantial electrical demands. High-capacity HVAC systems, custom indoor and architectural landscape lighting, outdoor kitchens, home saunas, and whole-house backup generators require meticulous electrical calculations and flawless execution.',
       'S Branch Electric brings master-level craftsmanship to Memorial homeowners who demand punctual arrival, spotless job sites, and strict adherence to village municipal codes.',
     ],
+    travelLogistics: {
+      dispatchOrigin: 'Dispatched from Huge Oaks St, just 3.5 miles north of Memorial Drive.',
+      typicalResponseTime: '15 to 20 minutes across Memorial Villages and the Energy Corridor.',
+      routeDetails: 'Direct access via Gessner Rd, Blalock Rd, and Bunker Hill Rd south across I-10.',
+      serviceAvailability: 'Scheduled residential estate appointments and urgent backup generator interlock installations.',
+    },
+    realCompletedJobs: [
+      {
+        title: 'Barrel Sauna Dedicated 240V Circuit Installation',
+        neighborhood: 'Memorial Villages (Frostwood area)',
+        scope: 'Trenched underground conduit and installed 40A dedicated 240V feeder and outdoor GFCI disconnect for residential barrel sauna.',
+        outcome: 'Safe, code-compliant outdoor power and subsequent whole-house generator updates (Reviewed by Melissa D. Zier).',
+      },
+      {
+        title: '400-Amp Heavy-Up & Dual EV Charger Hookup',
+        neighborhood: 'Hunters Creek Village',
+        scope: 'Upgraded residential service to 400A with dual 200A panels to support two Level 2 Tesla chargers and outdoor pool heat pump.',
+        outcome: 'Passed City of Bunker Hill Village / Harris County inspection with zero downtime on main living circuits.',
+      },
+    ],
     localContext: [
       {
         title: 'Severe Storm Exposure & Generator Interlocks',
@@ -257,6 +320,26 @@ export const serviceAreas: ServiceAreaPage[] = [
       'Because of Bellaire’s topography and proximity to Brays Bayou, flood mitigation and electrical elevation are critical safety considerations. Weatherproof enclosures, elevated exterior disconnects, and heavy-duty GFCI protection are non-negotiable standards here.',
       'S Branch Electric provides prompt, code-compliant residential and commercial electrical solutions across Bellaire, from panel relocations to smart lighting and high-speed EV chargers.',
     ],
+    travelLogistics: {
+      dispatchOrigin: 'Dispatched from Spring Branch via Loop 610 South (approx. 9 miles).',
+      typicalResponseTime: '20 to 30 minutes to City of Bellaire addresses.',
+      routeDetails: 'Southbound on I-610 West Loop South, exiting Bellaire Blvd or Bissonnet St.',
+      serviceAvailability: 'Pre-scheduled morning and afternoon arrival windows; strict City of Bellaire permit compliance.',
+    },
+    realCompletedJobs: [
+      {
+        title: 'Elevated Main Panel Replacement Post-Harvey',
+        neighborhood: 'Southdale, Bellaire',
+        scope: 'Replaced flood-compromised breaker panel with elevated, weather-sealed NEMA 3R enclosure per Bellaire flood hazard code.',
+        outcome: 'Satisfied strict municipal code requirements and restored home insurance certification.',
+      },
+      {
+        title: '50A Level 2 EV Charger Conduit Run',
+        neighborhood: 'Evergreen / Bellaire West',
+        scope: 'Routed 6/3 copper NM cable through garage wall to NEMA 14-50 receptacle with industrial-grade Bryant outlet.',
+        outcome: 'Delivered reliable 40A continuous EV vehicle charging without overheating.',
+      },
+    ],
     localContext: [
       {
         title: 'Elevated Electrical & Moisture Protection',
@@ -342,6 +425,26 @@ export const serviceAreas: ServiceAreaPage[] = [
       'Katy has evolved into one of the most dynamic, rapidly expanding communities west of Houston. From established master-planned favorites like Cinco Ranch and Grand Lakes to newer communities like Elyson and Cane Island, Katy homes demand reliable, high-capacity electricity.',
       'In newer Katy subdivisions, homeowners frequently run into frustrating "nuisance tripping" with ultra-sensitive AFCI (Arc Fault Circuit Interrupter) breakers. In older Katy areas, aging 100A–150A panels struggle under the load of new air conditioning units, pools, and EV chargers.',
       'S Branch Electric provides fast, honest diagnostics and precision installations throughout Katy, ensuring your home electrical system operates safely and without interruption.',
+    ],
+    travelLogistics: {
+      dispatchOrigin: 'Dispatched westbound from Spring Branch along the I-10 Katy Freeway corridor.',
+      typicalResponseTime: '25 to 35 minutes to Cinco Ranch, Grand Lakes, and Katy Mills areas.',
+      routeDetails: 'Direct westbound transit on I-10 West / Katy Freeway to Grand Parkway (TX-99).',
+      serviceAvailability: 'Scheduled residential service appointments with same-day emergency slots for sudden power loss.',
+    },
+    realCompletedJobs: [
+      {
+        title: 'AFCI Nuisance Breaker Diagnostics & Disc Light Fix',
+        neighborhood: 'Cinco Ranch, Katy',
+        scope: 'Investigated frequent tripping on living room and bedroom AFCI circuit; traced problem to harmonics from failing LED disc lights.',
+        outcome: 'Replaced defective fixtures and seated code-compliant breakers with zero subsequent nuisance trips (Reviewed by Christopher Highsmith).',
+      },
+      {
+        title: 'Whole-Home Panel Surge Protection & 50A EV Line',
+        neighborhood: 'Grand Lakes, Katy',
+        scope: 'Installed Type 2 panel-mounted surge suppressor and ran dedicated 240V 50A line for Level 2 EV charging station.',
+        outcome: 'Guarded dual HVAC compressor inverter boards against grid surges and delivered full overnight EV charging.',
+      },
     ],
     localContext: [
       {
@@ -434,6 +537,26 @@ export const serviceAreas: ServiceAreaPage[] = [
       'Cypress homes frequently feature heavy electrical loads: multiple air conditioning units, whole-home electric tankless water heaters requiring upwards of 120 amps, heated swimming pools, outdoor covered kitchens, and dedicated home theater rooms.',
       'S Branch Electric provides Cypress homeowners with skilled, code-compliant electrical work, ensuring your panel has the capacity to support your modern lifestyle safely.',
     ],
+    travelLogistics: {
+      dispatchOrigin: 'Dispatched northwest from Spring Branch via US-290 West.',
+      typicalResponseTime: '25 to 35 minutes to Bridgeland, Towne Lake, and Coles Crossing.',
+      routeDetails: 'Direct transit via Hempstead Rd / US-290 West, exiting Barker Cypress or Fry Rd.',
+      serviceAvailability: 'Advance booking for generator interlocks, EV chargers, and panel upgrades.',
+    },
+    realCompletedJobs: [
+      {
+        title: 'Manual Generator Interlock & 50A Inlet Box',
+        neighborhood: 'Bridgeland (Lakeland Village)',
+        scope: 'Installed mechanical panel interlock kit and routed exterior generator inlet box for storm backup power.',
+        outcome: 'Provided safe portable generator backup powering refrigerator, fans, and living room circuits during hurricane outages.',
+      },
+      {
+        title: 'Garage Workshop Subpanel Installation',
+        neighborhood: 'Coles Crossing, Cypress',
+        scope: 'Ran 60-amp feeder line from main breaker panel to a secondary 12-slot subpanel in the three-car garage.',
+        outcome: 'Allowed independent operation of table saw, dust collector, and compressor without tripping house circuits.',
+      },
+    ],
     localContext: [
       {
         title: 'High-Amperage Electric Tankless Water Heaters',
@@ -519,6 +642,26 @@ export const serviceAreas: ServiceAreaPage[] = [
       'Many established Spring homes built in the 1970s and 1980s still operate on original breaker panels that have reached the end of their design lifespan. Homeowners are modernizing with 200-amp upgrades, energy-efficient LED recessed lighting, and dedicated circuits for home workshops and electric vehicles.',
       'S Branch Electric delivers skilled, honest electrical service to Spring homeowners, prioritizing safety, upfront pricing, and clean, meticulous work.',
     ],
+    travelLogistics: {
+      dispatchOrigin: 'Dispatched northbound from Northwest Houston via Beltway 8 / I-45 North.',
+      typicalResponseTime: '30 to 40 minutes to Champion Forest, Klein, and Spring Trails.',
+      routeDetails: 'Transit via Sam Houston Tollway (Beltway 8 North) to TX-249 or I-45 North, exiting Louetta or FM 1960.',
+      serviceAvailability: 'Scheduled daytime appointments for panel modernization, rewiring, and storm repair.',
+    },
+    realCompletedJobs: [
+      {
+        title: 'Overhead Service Mast Storm Trauma Repair',
+        neighborhood: 'Champion Forest, Spring',
+        scope: 'Repaired bent 2-inch rigid steel service mast and weatherhead damaged by a fallen pine tree branch; coordinated CenterPoint meter pull.',
+        outcome: 'Restored overhead electrical service feed safely with city inspection approval within 24 hours.',
+      },
+      {
+        title: 'Split-Bus Panel Upgrade to 200A Modern Breaker Box',
+        neighborhood: 'Klein / Spring area',
+        scope: 'Replaced obsolete 1970s split-bus panel (lacking a single main disconnect) with a 200A Square D Homeline panel.',
+        outcome: 'Brought residence up to single main breaker disconnect safety standard and eliminated fire hazard.',
+      },
+    ],
     localContext: [
       {
         title: 'Aging Panels in 1970s & 1980s Neighborhoods',
@@ -582,11 +725,11 @@ export const serviceAreas: ServiceAreaPage[] = [
     path: '/electrical-services-houston-tx',
     city: 'Houston, TX',
     shortName: 'Houston',
-    metaTitle: 'Electrical Installation & Repairs in Houston, TX | S Branch Electric',
+    metaTitle: 'Electrical Services in Houston, TX | S Branch Electric',
     metaDescription:
-      'Trusted electrical services in Houston, TX. 5.0 Google rating. Residential and commercial installation, 200A panel upgrades, and repairs. Call Gustavo at 832-484-0514.',
-    h1: 'Professional Electrical Services in Houston, TX',
-    tagline: 'Comprehensive residential and commercial electrical installation and repairs across Greater Houston.',
+      'Citywide electrical contractor hub for Greater Houston, TX. Permitted panel heavy-ups, CenterPoint utility coordination, storm resilience, and commercial buildouts. Call 832-484-0514.',
+    h1: 'Greater Houston Electrical Contractor & Service Hub',
+    tagline: 'Delivering code-compliant, storm-resilient electrical infrastructure across the Greater Houston metropolitan area.',
     heroImage:
       'https://images.pexels.com/photos/27928762/pexels-photo-27928762.jpeg?auto=compress&cs=tinysrgb&h=900&w=1600',
     zipCodes: ['77055', '77024', '77080', '77007', '77008', '77019', '77027', '77098'],
@@ -601,53 +744,83 @@ export const serviceAreas: ServiceAreaPage[] = [
       'Oak Forest',
     ],
     intro: [
-      'Houston is America’s fourth-largest city and one of the most electrically demanding regions in the country. Our intense summer heat drives continuous air conditioning usage, while severe Gulf Coast thunderstorms, hurricanes, and winter freezes put extreme stress on residential and commercial electrical systems.',
-      'S Branch Electric is based in Houston and delivers dependable, code-compliant electrical work across the city. Whether you need an emergency breaker diagnosis, a 200-amp panel replacement, a commercial retail build-out, or dedicated equipment circuits, you work directly with experienced master electrician Gustavo ("Gus").',
-      'We combine prompt communication, fair upfront pricing, and meticulous National Electrical Code compliance to protect your home and business.',
+      'Houston is America’s fourth-largest metropolitan economy and presents one of the most demanding electrical environments in the United States. High Gulf Coast humidity, intense 100°F+ summer air conditioning demand, and recurring severe weather events—from Hurricane Beryl and the 2024 derecho to winter freezes—require electrical systems engineered for resilience.',
+      'S Branch Electric serves as your dedicated Greater Houston electrical contractor hub. While our operational shop is anchored on Huge Oaks St in Spring Branch (77055), master electrician Gustavo ("Gus") Rivera provides citywide service for residential panel modernizations, commercial tenant finish-outs, generator interlock safety systems, and complex troubleshooting across Harris County.',
+      'We coordinate seamlessly with the City of Houston Permitting Center and CenterPoint Energy, ensuring every heavy-up, meter disconnect, and commercial circuit passes municipal inspection on schedule.',
+    ],
+    travelLogistics: {
+      dispatchOrigin: 'Central operational hub at 1837 Huge Oaks St in Northwest Houston (Spring Branch, 77055).',
+      typicalResponseTime: '20 to 35 minutes across Inner Loop and West Houston neighborhoods.',
+      routeDetails: 'Rapid deployment via I-10, Loop 610, and US-290 to Heights, Montrose, Rice Military, and Midtown.',
+      serviceAvailability: 'Full commercial and residential service; direct contact with Gustavo Rivera (no call centers).',
+    },
+    realCompletedJobs: [
+      {
+        title: 'Interlock System Installation & Fault Breaker Replacement',
+        neighborhood: 'Houston Metro',
+        scope: 'Installed generator interlock safety kit, explained operation, and replaced a faulty tripping circuit breaker.',
+        outcome: 'Fast, friendly, thorough service with emergency backup readiness (Reviewed by Lety Lopez).',
+      },
+      {
+        title: 'Rapid Emergency Breaker Diagnostic & Repair',
+        neighborhood: 'Houston Metro',
+        scope: 'Responded within one hour of initial phone call for sudden power failure; tested and replaced burnt breaker.',
+        outcome: 'Quick and quality repair restoring power on the same visit (Reviewed by Marc Barnhill).',
+      },
+      {
+        title: 'Winter Storm Recovery Panel Modernization',
+        neighborhood: 'Houston Metro',
+        scope: 'Replaced storm-compromised electrical box, upgraded main grounding, and restored damaged fixtures.',
+        outcome: 'Quick weekend response, fair pricing, and complete power restoration (Reviewed by Norma Toledo).',
+      },
     ],
     localContext: [
       {
-        title: 'Gulf Coast Climate & Grid Strain',
-        body: 'Houston’s extreme heat index and lightning frequency create severe power surges. We install whole-home surge protection at the panel to safeguard high-end electronics and HVAC systems.',
+        title: 'City of Houston Permitting & Inspection Standards',
+        body: 'Electrical work across the Houston city limits must strictly comply with the City of Houston Electrical Code and NEC amendments. We handle all permit submissions and rough/final municipal inspections directly.',
       },
       {
-        title: 'Historic Neighborhoods vs. New Commercial Build-Outs',
-        body: 'From 1920s Heights bungalows with outdated knob-and-tube or cloth wiring to modern commercial tenant build-outs in Midtown and Galleria, we understand Houston’s diverse infrastructure.',
+        title: 'CenterPoint Energy Grid Coordination',
+        body: 'From service mast upgrades to temporary meter disconnects and underground service drops, we work directly with CenterPoint Energy technicians to minimize homeowner downtime during electrical overhauls.',
       },
       {
-        title: 'Direct Electrician Contact — No Call Centers',
-        body: 'Unlike large corporate franchises that send commission-based sales technicians, you speak directly with Gus for transparent quotes and expert execution.',
+        title: 'Extreme Weather Resilience & Surge Protection',
+        body: 'Houston leads the nation in thunderstorm lightning strikes. We install Type 2 whole-house surge protective devices and manual generator interlock switches so homes survive grid spikes and storm blackouts safely.',
       },
     ],
     housingElectricalProfile: {
-      ageRange: 'From historic 1920s-1940s bungalows to mid-century ranches and modern high-density townhomes.',
-      commonPanels: 'Everything from ancient fuse boxes and Zinsco/FPE panels to modern 200A Square D and Eaton boxes.',
+      ageRange: 'Diverse mix: 1920s historic Heights bungalows, 1960s ranch subdivisions, and modern urban 3-story townhomes.',
+      commonPanels: '100A–200A panels; frequent legacy Federal Pacific (FPE) and Zinsco boxes requiring insurance-mandated replacement.',
       keyChallenges:
-        'Extreme summer air conditioning power draw, lightning surge damage, water intrusion in exterior meters, and ungrounded older wiring.',
+        'Continuous high-amperage HVAC summer load, exterior service mast storm trauma, water intrusion in aging meter cans, and ungrounded circuits.',
       recommendedUpgrades:
-        '200-amp main breaker panel modernization, whole-house surge suppression, generator interlock kits, and dedicated appliance circuits.',
+        '200-amp main breaker panel heavy-up, manual generator interlock kit, Type 2 surge protection, and dedicated EV charging circuits.',
     },
     popularServices: [
       {
-        name: '200-Amp Service Panel Upgrades',
+        name: '200-Amp Main Service Heavy-Ups',
+        body: 'Upgrading older 100-amp service drops to 200A to power multiple HVAC units, induction ranges, and EV charging.',
         reason: 'Modernizing aging 100-amp boxes to support multi-ton AC units, EV chargers, and modern life.',
       },
       {
-        name: 'Emergency Breaker & Power Troubleshooting',
-        reason: 'Diagnosing dead outlets, buzzing breaker boxes, and blown circuits promptly across Houston.',
+        name: 'Manual Generator Interlock Systems',
+        body: 'Installing NEC-compliant interlock switches and exterior inlet boxes for safe, whole-home portable generator backup during hurricane outages.',
+        reason: 'Providing affordable, whole-home storm backup power without expensive whole-house standby units.',
       },
       {
         name: 'Whole-Home Surge Protection',
+        body: 'Panel-mounted suppressors safeguarding expensive electronics and air conditioning inverter boards from lightning surges.',
         reason: 'Protecting expensive appliances and smart electronics from Houston lightning and utility spikes.',
       },
       {
         name: 'Commercial Tenant Build-Outs & Lighting',
+        body: 'Three-phase power distribution, emergency battery backup lighting, and dedicated equipment circuits for Houston businesses.',
         reason: 'Equipping Houston offices, restaurants, and retail spaces with code-compliant commercial power.',
       },
     ],
     faqs: [
       {
-        question: 'Does S Branch Electric serve both residential and commercial clients in Houston?',
+        question: 'Does S Branch Electric serve both residential and commercial clients across Greater Houston?',
         answer:
           'Yes. We handle residential homes, rental properties, and commercial facilities throughout Houston, from simple outlet repairs to full panel installations and 3-phase commercial circuits.',
       },
@@ -657,14 +830,14 @@ export const serviceAreas: ServiceAreaPage[] = [
           'Yes. S Branch Electric has responded to many weekend and urgent calls for Houston families dealing with dead circuits, blown appliance fuses, and buzzing panels. Call 832-484-0514 directly.',
       },
       {
-        question: 'Do electrical installations require City of Houston permits?',
+        question: 'How do City of Houston electrical permits and CenterPoint disconnects work?',
         answer:
-          'Major electrical modifications, including panel upgrades, new subpanels, and new branch circuit installations, typically require a City of Houston permit and inspection. We perform all work strictly to current National Electrical Code (NEC) standards.',
+          'For major jobs like 200A panel upgrades, S Branch Electric pulls the required permit through the City of Houston Permitting Center, coordinates the scheduled disconnect with CenterPoint Energy, performs the work, and arranges final city inspection sign-off.',
       },
       {
-        question: 'How do I schedule an electrical project with S Branch Electric in Houston?',
+        question: 'How does S Branch Electric differ from large Houston corporate electrical franchises?',
         answer:
-          'Simply call 832-484-0514. You will speak directly with Gus to describe your project, get honest recommendations, and arrange a service visit that fits your schedule.',
+          'Large corporate contractors rely on call centers and dispatch commission-based sales technicians who push unnecessary replacements. With S Branch Electric, you speak directly with owner and master electrician Gustavo Rivera, ensuring honest technical advice and fair pricing.',
       },
     ],
   },
